@@ -221,7 +221,7 @@ switch ( $op )
   	default:
   	    include_once( "admin_header.php" );
 		xoops_cp_header();
-        aChat_adminmenu(_MI_ACHAT_UTILITIES, 2);
+        aChat_adminmenu(_MI_ACHAT_UTILITIES, 3);
         utilities();
         include_once( 'admin_footer.php' );
     break;
