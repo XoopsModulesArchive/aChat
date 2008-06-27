@@ -25,8 +25,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
-// v 0.23 2007/09/04 22:32:28
+// CrÃ©Ã© par Niluge_Kiwi
+// v 0.232 2007/10/30 13:58:22
 // ======================================================================== //
 //
 //   www.lmdmf.net
@@ -43,74 +43,77 @@ if ( !@include_once(XOOPS_ROOT_PATH."/modules/aChat/language/" . $xoopsConfig['l
 
 
 function b_achat_display_show($options) {
-	// Cette fonction gère les 2 blocs : 
-	// - l'actif avec autorefresh et envoie de messages
-	// - et le passif avec seulement affichage statique des derniers messages
-	
-	global $xoopsUser;
+    // Cette fonction gÃ¨re les 2 blocs : 
+    // - l'actif avec autorefresh et envoie de messages
+    // - et le passif avec seulement affichage statique des derniers messages
 
-	// Gestion du type de bloc
-	$isactive = $options[0] == 1 ? true : false;
-	$myts = &MyTextSanitizer::getInstance();
+    global $xoopsUser;
 
-	$msgobj_h =& xoops_getmodulehandler('message','aChat');
-	include_once XOOPS_ROOT_PATH."/class/xoopsformloader.php";
-	include_once XOOPS_ROOT_PATH."/modules/aChat/include/functions.php";
-	if($isactive) {
-		include_once XOOPS_ROOT_PATH."/modules/aChat/class/formachat.php";
-	}
+    // Gestion du type de bloc
+    $isactive = $options[0] == 1 ? true : false;
+    $myts = &MyTextSanitizer::getInstance();
 
-	$block = array();
-	
+    $msgobj_h =& xoops_getmodulehandler('message','aChat');
+    include_once XOOPS_ROOT_PATH."/class/xoopsformloader.php";
+    include_once XOOPS_ROOT_PATH."/modules/aChat/include/functions.php";
+    if($isactive) {
+        include_once XOOPS_ROOT_PATH."/modules/aChat/class/formachat.php";
+    }
 
-	
-	// Gestion des variables javascript et css si block actif
-	if($isactive) {
-		if(!empty($options[3])) {
-			$block['tmp_refresh'] = floatval($options[3]);
-		} else {
-			$tmp_refresh = getmoduleoptionNK('tmp_refresh');
-			$block['tmp_refresh'] = !empty($tmp_refresh) ? intval($tmp_refresh) : 15;
-		}
-		$block['div_height'] = !empty($options[2]) ? intval($options[2]) : 180;
-	}
-	// Nombre de messages affichés
-	$n = !empty($options[1]) ? intval($options[1]) : getmoduleoptionNK('nbre_msg_aff');
-	
-	// Récupération des messages
-	$messages = $msgobj_h->getMessages('last', $n);
-	
-	$block['messages'] = $messages;
-	
-	if($isactive) {
-		$textformsize = !empty($options[4]) ? intval($options[4]) : 23;
-		
-		// Gestion des droits d'envoie des messages
-		$groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+    $block = array();
 
-		$Module_handler =& xoops_gethandler('module');
-		$Module =& $Module_handler -> getByDirname('aChat');
-		$module_id = $Module -> getVar('mid');
-		$gperm_handler = &xoops_gethandler('groupperm');
-		
-		$block['achat_form'] = '';
-		if ($gperm_handler->checkRight('aChatCanPost', 0 , $groups, $module_id)) {
-			include XOOPS_ROOT_PATH."/modules/aChat/include/achat_form.php";
-			$block['achat_form'] = $aform->render();
-		}
-	}
-	
-	return $block;
+
+
+    // Gestion des variables javascript et css si bloc actif
+    if($isactive) {
+        if(!empty($options[3])) {
+            //$block['tmp_refresh']
+            $tmp_refresh = floatval($options[3]);
+        } else {
+            $tmp_refresh = getmoduleoptionNK('tmp_refresh');
+            $tmp_refresh = !empty($tmp_refresh) ? intval($tmp_refresh) : 15;
+        }
+        $block['div_height'] = !empty($options[2]) ? intval($options[2]) : 180;
+
+        aChat_JS_CSS_Headers($tmp_refresh);
+    }
+    // Nombre de messages affichÃ©s
+    $n = !empty($options[1]) ? intval($options[1]) : getmoduleoptionNK('nbre_msg_aff');
+
+    // RÃ©cupÃ©ration des messages
+    $messages = $msgobj_h->getMessages('last', $n);
+
+    $block['messages'] = $messages;
+
+    if($isactive) {
+        $textformsize = !empty($options[4]) ? intval($options[4]) : 23;
+
+        // Gestion des droits d'envoie des messages
+        $groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+
+        $Module_handler =& xoops_gethandler('module');
+        $Module =& $Module_handler -> getByDirname('aChat');
+        $module_id = $Module -> getVar('mid');
+        $gperm_handler = &xoops_gethandler('groupperm');
+
+        $block['achat_form'] = '';
+        if ($gperm_handler->checkRight('aChatCanPost', 0 , $groups, $module_id)) {
+            include XOOPS_ROOT_PATH."/modules/aChat/include/achat_form.php";
+            $block['achat_form'] = $aform->render();
+        }
+    }
+
+    return $block;
 }
 
 function b_achat_display_edit($options) {
-	$form = "<input type='hidden' name='options[0]' value='".$options[0]."' />";
-	$form .= "&nbsp;"._MB_ACHAT_NBRE_MSG_AFFICHE.":&nbsp;<input type='text' name='options[1]' size='4' value='".$options[1]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_NBRE_MSG_AFFICHEDESC;
-	if($options[0] == 1) {
-		$form .= "<br />&nbsp;"._MB_ACHAT_DIV_HEIGHT.":&nbsp;<input type='text' name='options[2]' size='4' value='".$options[2]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_DIV_HEIGHTDESC;
-		$form .= "<br />&nbsp;"._MB_ACHAT_TMP_REFRESH.":&nbsp;<input type='text' name='options[3]' size='4' value='".$options[3]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_TMP_REFRESHDESC;
-		$form .= "<br />&nbsp;"._MB_ACHAT_DIV_WIDTH.":&nbsp;<input type='text' name='options[4]' size='4' value='".$options[4]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_DIV_WIDTHDESC;
-	}
-	return $form;
+    $form = "<input type='hidden' name='options[0]' value='".$options[0]."' />";
+    $form .= "&nbsp;"._MB_ACHAT_NBRE_MSG_AFFICHE.":&nbsp;<input type='text' name='options[1]' size='4' value='".$options[1]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_NBRE_MSG_AFFICHEDESC;
+    if($options[0] == 1) {
+        $form .= "<br />&nbsp;"._MB_ACHAT_DIV_HEIGHT.":&nbsp;<input type='text' name='options[2]' size='4' value='".$options[2]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_DIV_HEIGHTDESC;
+        $form .= "<br />&nbsp;"._MB_ACHAT_TMP_REFRESH.":&nbsp;<input type='text' name='options[3]' size='4' value='".$options[3]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_TMP_REFRESHDESC;
+        $form .= "<br />&nbsp;"._MB_ACHAT_DIV_WIDTH.":&nbsp;<input type='text' name='options[4]' size='4' value='".$options[4]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_DIV_WIDTHDESC;
+    }
+    return $form;
 }
 ?>

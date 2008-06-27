@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.22 2006/09/01 16:24:28
 // ======================================================================== //
 //
@@ -43,15 +43,15 @@ if ( !@include_once(XOOPS_ROOT_PATH."/modules/aChat/language/" . $xoopsConfig['l
 
 
 function b_achat_whois_online_show($options) {
-// Modified from online system block
+    // Modified from online system block
     global $xoopsUser, $xoopsModule;
     $online_handler =& xoops_gethandler('online');
     mt_srand((double)microtime()*1000000);
-	// Ajouts
-	// temps d'actualisation
-	$refreshtime = !is_null(intval($options[0])) ? intval($options[0]) : 300;
-	$online_handler->gc($refreshtime);
-	
+    // Ajouts
+    // temps d'actualisation
+    $refreshtime = !is_null(intval($options[0])) ? intval($options[0]) : 300;
+    $online_handler->gc($refreshtime);
+
     if (is_object($xoopsUser)) {
         $uid = $xoopsUser->getVar('uid');
         $uname = $xoopsUser->getVar('uname');
@@ -60,8 +60,8 @@ function b_achat_whois_online_show($options) {
         $uname = '';
     }
 
-	$online_handler->write($uid, $uname, time(), $xoopsModule->getVar('mid'), $_SERVER['REMOTE_ADDR']);
-	
+    $online_handler->write($uid, $uname, time(), $xoopsModule->getVar('mid'), $_SERVER['REMOTE_ADDR']);
+
     $onlines =& $online_handler->getAll();
     if (false != $onlines) {
         $total = count($onlines);
@@ -93,7 +93,7 @@ function b_achat_whois_online_show($options) {
 }
 
 function b_achat_whois_online_edit($options) {
-	$form = _MB_ACHAT_TMP_REFRESH.":&nbsp;<input type='text' name='options[0]' size='4' value='".$options[0]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_TMP_REFRESHDESC;
-	return $form;
+    $form = _MB_ACHAT_TMP_REFRESH.":&nbsp;<input type='text' name='options[0]' size='4' value='".$options[0]."' /><br />&nbsp;&nbsp;"._MB_ACHAT_TMP_REFRESHDESC;
+    return $form;
 }
 ?>

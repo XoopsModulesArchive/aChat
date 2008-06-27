@@ -1,5 +1,5 @@
 <?php
-// $Id: functions.php, see below 
+// $Id: functions.php, see below
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,8 +25,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// CrÈÈ par Niluge_Kiwi
-// v 0.23 2007/09/04 22:32:31
+// Cr√©√© par Niluge_Kiwi
+// v 0.232 2007/10/30 13:58:32
 // ======================================================================== //
 //
 //   www.lmdmf.net
@@ -43,12 +43,12 @@
  * @copyright	(c) The Xoops Project - www.xoops.org
  */
 function aChat_Get_Allowed_Colors()
-{	
-	$allowed_colors = getmoduleoptionNK('allowed_colors');
+{
+    $allowed_colors = getmoduleoptionNK('allowed_colors');
 
-	$colors = (count($allowed_colors) == 1 && $allowed_colors[0] == '') ? array( "000000", "dc0000", "4cb5e8", "6600cc", "336600", "000099", "ff6600", "660000" ) : $allowed_colors;
+    $colors = (count($allowed_colors) == 1 && $allowed_colors[0] == '') ? array( "000000", "dc0000", "4cb5e8", "6600cc", "336600", "000099", "ff6600", "660000" ) : $allowed_colors;
 
-	return $colors;
+    return $colors;
 }
 
 /**
@@ -58,14 +58,14 @@ function aChat_Get_Allowed_Colors()
  * @copyright	(c) The Xoops Project - www.xoops.org
  */
 function aChat_Get_Ip()
-{	
-	global $_SERVER;
-	if($_SERVER) {
-		$ip = $_SERVER['REMOTE_ADDR'];
-	} else {
-		$ip = xoops_getenv('REMOTE_ADDR');
-	}
-	return $ip;
+{
+    global $_SERVER;
+    if($_SERVER) {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    } else {
+        $ip = xoops_getenv('REMOTE_ADDR');
+    }
+    return $ip;
 }
 
 
@@ -76,15 +76,15 @@ function aChat_Get_Ip()
  * @copyright	(c) The Xoops Project - www.xoops.org
  */
 function aChat_Get_Last_Color()
-{	
-	global $msgobj_h, $xoopsUser;
+{
+    global $msgobj_h, $xoopsUser;
 
-	if(!is_object($msgobj_h))
-		$msgobj_h =& xoops_getmodulehandler('message','aChat');
+    if(!is_object($msgobj_h))
+    $msgobj_h =& xoops_getmodulehandler('message','aChat');
 
-	$msgobj = $msgobj_h->getLastPost();
-	
-	return $msgobj->getVar('color');
+    $msgobj = $msgobj_h->getLastPost();
+
+    return $msgobj->getVar('color');
 }
 
 /**
@@ -94,13 +94,13 @@ function aChat_Get_Last_Color()
  * @copyright	(c) The Xoops Project - www.xoops.org
  */
 function aChat_Get_Xoops_Version()
-{	
-	$xoops_version_int = substr(XOOPS_VERSION, 6, 1);
-	$xoops_version_float = substr(XOOPS_VERSION, 8);
+{
+    $xoops_version_int = substr(XOOPS_VERSION, 6, 1);
+    $xoops_version_float = substr(XOOPS_VERSION, 8);
 
-	$xoops_version = $xoops_version_int.'.'.str_replace('.', '', $xoops_version_float);
-	return $xoops_version >= 2.014;
-	
+    $xoops_version = $xoops_version_int.'.'.str_replace('.', '', $xoops_version_float);
+    return $xoops_version >= 2.014;
+
 }
 
 /**
@@ -147,36 +147,63 @@ function aChat_utf8RawUrlDecode ($source) {
  * Return's a module's option (for the aChat module)
  *
  * @ From package News
- * @author HervÈ Thouzard (www.herve-thouzard.com)
- *		Modified by Niluge_KiWi : Èvite les conflits si diffÈrents modules ont des options en commun (mÍme nom)
+ * @author Herv√© Thouzard (www.herve-thouzard.com)
+ *		Modified by Niluge_KiWi : √©vite les conflits si diff√©rents modules ont des options en commun (m√™me nom)
  * @copyright	(c) The Xoops Project - www.xoops.org
  * @param string $option	module option's name
  */
 function getmoduleoptionNK($option, $repmodule='aChat')
 {
-	global $xoopsModuleConfig, $xoopsModule;
-	static $tbloptions= Array(Array());
-	if(is_array($tbloptions) && array_key_exists($repmodule,$tbloptions) && array_key_exists($option,$tbloptions[$repmodule])) {
-		return $tbloptions[$repmodule][$option];
-	}
+    global $xoopsModuleConfig, $xoopsModule;
+    static $tbloptions= Array(Array());
+    if(is_array($tbloptions) && array_key_exists($repmodule,$tbloptions) && array_key_exists($option,$tbloptions[$repmodule])) {
+        return $tbloptions[$repmodule][$option];
+    }
 
-	$retval=false;
-	if (isset($xoopsModuleConfig) && (is_object($xoopsModule) && $xoopsModule->getVar('dirname') == $repmodule && $xoopsModule->getVar('isactive'))) {
-		if(isset($xoopsModuleConfig[$option])) {
-			$retval= $xoopsModuleConfig[$option];
-		}
-	} else {
-		$module_handler =& xoops_gethandler('module');
-		$module =& $module_handler->getByDirname($repmodule);
-		$config_handler =& xoops_gethandler('config');
-		if ($module) {
-		    $moduleConfig =& $config_handler->getConfigsByCat(0, $module->getVar('mid'));
-	    	if(isset($moduleConfig[$option])) {
-	    		$retval= $moduleConfig[$option];
-	    	}
-		}
-	}
-	$tbloptions[$repmodule][$option]=$retval;
-	return $retval;
+    $retval=false;
+    if (isset($xoopsModuleConfig) && (is_object($xoopsModule) && $xoopsModule->getVar('dirname') == $repmodule && $xoopsModule->getVar('isactive'))) {
+        if(isset($xoopsModuleConfig[$option])) {
+            $retval= $xoopsModuleConfig[$option];
+        }
+    } else {
+        $module_handler =& xoops_gethandler('module');
+        $module =& $module_handler->getByDirname($repmodule);
+        $config_handler =& xoops_gethandler('config');
+        if ($module) {
+            $moduleConfig =& $config_handler->getConfigsByCat(0, $module->getVar('mid'));
+            if(isset($moduleConfig[$option])) {
+                $retval= $moduleConfig[$option];
+            }
+        }
+    }
+    $tbloptions[$repmodule][$option]=$retval;
+    return $retval;
 }
+
+// Gestion des headers (javascript et css)
+function aChat_JS_CSS_Headers($tmp_refresh = 15) {
+    global $xoTheme, $xoopsTpl;
+     
+    $aChat_url = XOOPS_URL.'/modules/aChat/';
+    if(isset($xoTheme) && is_object($xoTheme)) {
+
+        $xoTheme->addScript( '', array( 'type' => 'text/javascript' ), '	var aChat_url = "' .XOOPS_URL.'/modules/aChat";
+   	var aChat_tmp_refresh = '.$tmp_refresh.';' );
+        $xoTheme->addScript( $aChat_url.'/include/js/XHRConnection.js' );
+        $xoTheme->addScript( $aChat_url.'/include/js/aChat_functions.js' );
+        $xoTheme->addStylesheet( $aChat_url.'/templates/aChat.css' );
+
+    } elseif(isset($xoopsTpl) && is_object($xoopsTpl)) {	// Compatibilit√© avec les anciennes versions de Xoops
+         
+        $achat_module_header = '   <link rel="stylesheet" type="text/css" href="'.$aChat_url.'/templates/aChat.css" />
+   <script type="text/javascript">
+   	var aChat_url = "' .XOOPS_URL.'/modules/aChat";
+   	var aChat_tmp_refresh = '.$tmp_refresh.';
+   </script>
+   <script src="'.$aChat_url.'/include/js/XHRConnection.js" type="text/javascript"></script>
+   <script src="'.$aChat_url.'/include/js/aChat_functions.js" type="text/javascript"></script>';
+        $xoopsTpl->assign('xoops_module_header', $achat_module_header);
+    }
+}
+
 ?>

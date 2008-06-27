@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.232 2007/10/12 22:38:22
 // ======================================================================== //
 //
@@ -122,7 +122,7 @@ $modversion['blocks'][] = array(
 	'edit_func' => 'b_achat_display_edit',
 	'options' => '0|10',
 	'template' => 'achat_block_static.html');
-	
+
 // Config
 $modversion['config'][1] = array(
 	'name' => 'nbre_msg_aff',
@@ -176,7 +176,7 @@ $modversion['config'][] = array(
 		'6' => 'ff6600',
 		'7' => '660000'),
 	'category' => 'aChat_settings');
-		
+
 $modversion['config'][] = array(
 	'name' => 'nick4guests',
 	'title' => '_MI_ACHAT_NICK4GUESTS',
@@ -185,7 +185,7 @@ $modversion['config'][] = array(
 	'valuetype' => 'int',
 	'default' => 1,
 	'category' => 'aChat_settings');
-	
+
 $modversion['config'][] = array(
 	'name' => 'purge_folder',
 	'title' => '_MI_ACHAT_PURGE_FOLDER',

@@ -1,5 +1,5 @@
 <?php
-// $Id: admin_header.php, see below 
+// $Id: admin_header.php, see below
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.232 2007/10/12 22:44:21
 // ======================================================================== //
 //
@@ -42,14 +42,14 @@ include_once '../../../include/cp_header.php';
 include_once '../../../include/functions.php';
 include_once XOOPS_ROOT_PATH . '/class/xoopsmodule.php';
 include_once './functions.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php'; 
+include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
 
-	if (file_exists(XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/' . $xoopsConfig['language'] . '/modinfo.php')) {
-		include_once XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/' . $xoopsConfig['language'] . '/modinfo.php';
-	} else {
-		include_once XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/french/modinfo.php';
-	}
-	
+if (file_exists(XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/' . $xoopsConfig['language'] . '/modinfo.php')) {
+    include_once XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/' . $xoopsConfig['language'] . '/modinfo.php';
+} else {
+    include_once XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/french/modinfo.php';
+}
+
 $myts = &MyTextSanitizer::getInstance();
 $msgobj_h =& xoops_getmodulehandler('message');
 

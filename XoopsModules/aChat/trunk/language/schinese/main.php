@@ -25,8 +25,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Cr茅茅 par Niluge_Kiwi, corrig茅 par vpxavier <vpxavier@gmail.com>
-// v 0.232 2007/10/31 23:23:53
+// Cr殚 par Niluge_Kiwi
+// v 0.2 2006/08/30 19:51:23
 // ======================================================================== //
 //
 //   www.lmdmf.net
@@ -36,33 +36,34 @@
 // ======================================================================== //
 //
 
-define("_MD_ACHAT_SENDMSG","Send");
-define("_MD_ACHAT_TITLE_LOGS","Chat Logs");
-define("_MD_ACHAT_GOTO_ACHAT","Go to the chat");
+define("_MD_ACHAT_SENDMSG","发送");
+define("_MD_ACHAT_TITLE","聊天室");
+define("_MD_ACHAT_TITLE_LOGS","聊天记录");
+define("_MD_ACHAT_GOTO_ACHAT","去聊天室");
 
 // View Archives
-define("_MD_ACHAT_TITLE_ARCHIVES","Archives");
+define("_MD_ACHAT_TITLE_ARCHIVES","存档");
 define("_MD_ACHAT_ARCHIVE_FROM","from");
 define("_MD_ACHAT_ARCHIVE_TO","to");
-define("_MD_ACHAT_ARCHIVE_NO","There is no archive.");
-define("_MD_ACHAT_ARCHIVE_RETURN","Return to the home archives");
-define("_MD_ACHAT_ARCHIVE_NOARCHIVESELECTED","No archive selected.");
+define("_MD_ACHAT_ARCHIVE_NO","没有存档.");
+define("_MD_ACHAT_ARCHIVE_RETURN","返回存档首页");
+define("_MD_ACHAT_ARCHIVE_NOARCHIVESELECTED","未选择存档.");
 
 // MyPageNav
-define("_MD_ACHAT_MESSAGES","messages");
-define("_MD_ACHAT_FROM","from");
-define("_MD_ACHAT_FIRST_OLD","First older");
-define("_MD_ACHAT_FIRST_RECENT","First newer");
+define("_MD_ACHAT_MESSAGES","消息");
+define("_MD_ACHAT_FROM","来自");
+define("_MD_ACHAT_FIRST_OLD","旧的在前");
+define("_MD_ACHAT_FIRST_RECENT","新的在前");
 
 // Blocs
-define("_MB_ACHAT_NBRE_MSG_AFFICHE","Number of messages to display");
-define("_MB_ACHAT_NBRE_MSG_AFFICHEDESC","(0 for the default value defined in the module settings)");
-define("_MB_ACHAT_TMP_REFRESH","Time between each refresh of the messages");
-define("_MB_ACHAT_TMP_REFRESHDESC","(in seconds, 0 for the default value defined in the module settings)");
-define("_MB_ACHAT_DIV_HEIGHT","Displayed height for the messages");
-define("_MB_ACHAT_DIV_HEIGHTDESC","(in pixels, 0 for the default value: 180px)");
-define("_MB_ACHAT_DIV_WIDTH","Displayed width for the  input textbox");
-define("_MB_ACHAT_DIV_WIDTHDESC","(in columns, 0 for the default value: 23 columns)");
+define("_MB_ACHAT_NBRE_MSG_AFFICHE","要显示的消息数");
+define("_MB_ACHAT_NBRE_MSG_AFFICHEDESC","(留空则使用默认参数设置)");
+define("_MB_ACHAT_TMP_REFRESH","刷新消息的间隔时间");
+define("_MB_ACHAT_TMP_REFRESHDESC","(单位秒, 留空则使用默认参数设置)");
+define("_MB_ACHAT_DIV_HEIGHT","消息显示的高度");
+define("_MB_ACHAT_DIV_HEIGHTDESC","(单位像素, 留空则使用默认值: 180px)");
+define("_MB_ACHAT_DIV_WIDTH","输入框的宽度");
+define("_MB_ACHAT_DIV_WIDTHDESC","(单位列(column), 默认值: 23列)");
 
 
 ?>

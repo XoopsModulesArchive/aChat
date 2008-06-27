@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.23 2007/08/13 23:05:22
 // ======================================================================== //
 //
@@ -38,7 +38,7 @@
 include_once "../../mainfile.php";
 
 if (!defined('XOOPS_ROOT_PATH')) {
-	die("XOOPS root path not defined");
+    die("XOOPS root path not defined");
 }
 
 $msgobj_h =& xoops_getmodulehandler('message');

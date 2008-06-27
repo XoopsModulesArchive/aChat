@@ -24,7 +24,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// ModifiÈ par Niluge_Kiwi
+// Modifi√© par Niluge_Kiwi
 // v 0.2 2006/08/29 23:05:37
 // ======================================================================== //
 //
@@ -45,8 +45,8 @@ class MyPageNavNK extends XoopsPageNav
     /**
      * @access  private
      */
-	// Ajout
-	var $_order;
+    // Ajout
+    var $_order;
     var $_extra;
     var $_perpage_arr = array(15,30,50,100,200,500,1000);
 
@@ -59,12 +59,12 @@ class MyPageNavNK extends XoopsPageNav
      * @param   string  $start_name     Name for "start" or "offset"
      * @param   string  $extra_arg      Additional arguments to pass in the URL
      **/
-	 // ModifiÈ
+    // Modifi√©
     function MyPageNavNK($total_items, $items_perpage, $current_start, $order="DESC", $extra_arg="")
     {
         $this->XoopsPageNav($total_items, $items_perpage, $current_start, "start", 'perpage='.intval($items_perpage).'&amp;order='.$order.'&amp;'.$extra_arg);
-		// Ajout et Modif
-		$this->_order = $order;
+        // Ajout et Modif
+        $this->_order = $order;
         $this->_extra = $extra_arg;
     }
 
@@ -76,7 +76,7 @@ class MyPageNavNK extends XoopsPageNav
      **/
     function setPerpageArray($perpages)
     {
-	$this->_perpage_arr = $perpages;
+        $this->_perpage_arr = $perpages;
     }
 
 
@@ -91,20 +91,20 @@ class MyPageNavNK extends XoopsPageNav
         if ( !$this->perpage ) {
             return '';
         }
-	$ret = $this->renderNav($offset);
+        $ret = $this->renderNav($offset);
         $total_pages = ceil($this->total / $this->perpage);
-	if ($ret != '' && $total_pages <= $offset ) {
-	    $extra_arg = $this->_extra;
-	    if ( $extra_arg != '' && ( substr($extra_arg, -5) != '&amp;' || substr($extra_arg, -1) != '&' ) ) {
-		$extra_arg .= '&amp;';
-	    }
-		// ModifiÈ
-	    $ret .= '&nbsp;<a href="'.xoops_getenv('PHP_SELF').'?perpage='.$this->total.'&amp;order='.$this->_order.'&amp;'.$extra_arg.'start=1">'._ALL.'</a>';
-	}
-        if ( $this->total > 0 ) {
-	    $ret .= $this->renderSelectStart($total_pages);
+        if ($ret != '' && $total_pages <= $offset ) {
+            $extra_arg = $this->_extra;
+            if ( $extra_arg != '' && ( substr($extra_arg, -5) != '&amp;' || substr($extra_arg, -1) != '&' ) ) {
+                $extra_arg .= '&amp;';
+            }
+            // Modifi√©
+            $ret .= '&nbsp;<a href="'.xoops_getenv('PHP_SELF').'?perpage='.$this->total.'&amp;order='.$this->_order.'&amp;'.$extra_arg.'start=1">'._ALL.'</a>';
         }
-	return $ret;
+        if ( $this->total > 0 ) {
+            $ret .= $this->renderSelectStart($total_pages);
+        }
+        return $ret;
     }
 
     /**
@@ -114,14 +114,14 @@ class MyPageNavNK extends XoopsPageNav
      **/
     function renderSelectStart($total_pages)
     {
-	$extra_arg = $this->_extra;
-	if ( $extra_arg != '' ) {
-	    $extra_arg = preg_replace('/&amp;/', '&', $extra_arg);
-	    if ( substr($extra_arg, -1) != '&' ) {
-		$extra_arg .= '&';
-	    }
-	}
-		// ModifiÈ
+        $extra_arg = $this->_extra;
+        if ( $extra_arg != '' ) {
+            $extra_arg = preg_replace('/&amp;/', '&', $extra_arg);
+            if ( substr($extra_arg, -1) != '&' ) {
+                $extra_arg .= '&';
+            }
+        }
+        // Modifi√©
         $ret = '<script type="text/javascript">
 function navigate() {
 	var order = "DESC";
@@ -142,20 +142,20 @@ function changeAffichagepagenavForm() {
 	}
 }
 </script>';
-		// Ajout
-		$ret .= '&nbsp;&nbsp;<a href="javascript:;" onclick="changeAffichagepagenavForm();">'. _OPTIONS .'</a>';
+        // Ajout
+        $ret .= '&nbsp;&nbsp;<a href="javascript:;" onclick="changeAffichagepagenavForm();">'. _OPTIONS .'</a>';
         $ret .= '<form name="pagenavform" action="#" style="display: none;" id="pagenavform">';
-		// Ajouts
-			$checked = ($this->_order == 'ASC') ? ' checked="checked"' : '';
-		$ret .= '<input name="order" value="ASC"'.$checked.' type="radio" />'._MD_ACHAT_FIRST_OLD;
-			$checked = ($this->_order == 'DESC') ? ' checked="checked"' : '';
-		$ret .= '<input name="order" value="DESC"'.$checked.' type="radio" />'._MD_ACHAT_FIRST_RECENT;
-		// Fin Ajouts
+        // Ajouts
+        $checked = ($this->_order == 'ASC') ? ' checked="checked"' : '';
+        $ret .= '<input name="order" value="ASC"'.$checked.' type="radio" />'._MD_ACHAT_FIRST_OLD;
+        $checked = ($this->_order == 'DESC') ? ' checked="checked"' : '';
+        $ret .= '<input name="order" value="DESC"'.$checked.' type="radio" />'._MD_ACHAT_FIRST_RECENT;
+        // Fin Ajouts
         $ret .= '&nbsp;<select name="perpage">';
-	$perpages = $this->_perpage_arr;
-	if (!in_array($this->perpage, $perpages)) {
-	    array_unshift($perpages, $this->perpage);
-	}
+        $perpages = $this->_perpage_arr;
+        if (!in_array($this->perpage, $perpages)) {
+            array_unshift($perpages, $this->perpage);
+        }
         foreach ($perpages as $perpage) {
             $selected = ($perpage == $this->perpage) ? '" selected="selected">' : '">';
             $ret .= '<option value="'.$perpage.$selected.$perpage.' '._MD_ACHAT_MESSAGES.'</option>';

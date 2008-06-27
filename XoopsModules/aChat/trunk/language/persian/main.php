@@ -34,7 +34,10 @@
 // kiwiiii@gmail.com
 //
 // ======================================================================== //
+//    Translation by Voltan
 //
+//    http://www.irxoops.org/userinfo.php?uid=581
+// ======================================================================== //
 
 define("_MD_ACHAT_SENDMSG","فرستادن");
 define("_MD_ACHAT_TITLE","چت");
@@ -57,9 +60,9 @@ define("_MD_ACHAT_FIRST_RECENT","اول تازه هاي بيشتر");
 
 // Blocs
 define("_MB_ACHAT_NBRE_MSG_AFFICHE","تعداد پيام هايي که نمايش داده ميشود");
-define("_MB_ACHAT_NBRE_MSG_AFFICHEDESC","(0 for the default value defined ond the parameters of the module)");
+define("_MB_ACHAT_NBRE_MSG_AFFICHEDESC","(0 for the default value defined in the module settings)");
 define("_MB_ACHAT_TMP_REFRESH","زمان ريفريش بين هر پيام");
-define("_MB_ACHAT_TMP_REFRESHDESC","(in seconds, 0 for the default value defined ond the parameters of the module)");
+define("_MB_ACHAT_TMP_REFRESHDESC","(in seconds, 0 for the default value defined in the module settings)");
 define("_MB_ACHAT_DIV_HEIGHT","بلندي پيام هاي نمايش داده شده");
 define("_MB_ACHAT_DIV_HEIGHTDESC","(in pixels, 0 for the default value: 180px)");
 define("_MB_ACHAT_DIV_WIDTH","عرض نمايش دادن جعبه ي پيام ها");

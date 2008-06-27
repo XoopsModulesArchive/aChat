@@ -26,7 +26,7 @@
 //  ------------------------------------------------------------------------ //
 
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.2 2006/08/23 19:06:27
 // ======================================================================== //
 //
@@ -47,14 +47,14 @@ $adminmenu[$i]['title'] = _MI_ACHAT_UTILITIES;
 $adminmenu[$i++]['link'] = "admin/utilities.php";
 
 if (isset($xoopsModule)) {
-  $i = 0;
-	$headermenu[$i]['title'] = _PREFERENCES;
-	$headermenu[$i++]['link'] = '../../system/admin.php?fct=preferences&amp;op=showmod&amp;mod=' . $xoopsModule->getVar('mid');
+    $i = 0;
+    $headermenu[$i]['title'] = _PREFERENCES;
+    $headermenu[$i++]['link'] = '../../system/admin.php?fct=preferences&amp;op=showmod&amp;mod=' . $xoopsModule->getVar('mid');
 
-	$headermenu[$i]['title'] = _MI_ACHAT_GOTO_INDEX;
-	$headermenu[$i++]['link'] = XOOPS_URL . '/modules/'.$xoopsModule->getVar('dirname').'/';
+    $headermenu[$i]['title'] = _MI_ACHAT_GOTO_INDEX;
+    $headermenu[$i++]['link'] = XOOPS_URL . '/modules/'.$xoopsModule->getVar('dirname').'/';
 
-	$headermenu[$i]['title'] = _MI_ACHAT_HELP;
-	$headermenu[$i++]['link'] = "help.php";
+    $headermenu[$i]['title'] = _MI_ACHAT_HELP;
+    $headermenu[$i++]['link'] = "help.php";
 }
 ?>

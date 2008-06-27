@@ -1,5 +1,4 @@
 <?php
-// $Id: modinfo.php, see below 
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,8 +24,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi, corrigé par vpxavier <vpxavier@gmail.com>
-// v 0.232 2007/10/31 23:23:53
+// Cr殚 par Niluge_Kiwi
+// v 0.2 2006/08/25 20:11:36
 // ======================================================================== //
 //
 //   www.lmdmf.net
@@ -39,49 +38,49 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME', 'aChat');
+define('_MI_ACHAT_NAME', '聊天室');
 // A brief description of this module
-define('_MI_ACHAT_DESC','A module for Chatting, a TagBoard with AJAX!');
+define('_MI_ACHAT_DESC','聊天室模块, 使用AJAX!');
 
 // Menu
-define("_MI_ACHAT_HOME", "Home");
-define("_MI_ACHAT_PURGE", "Purge");
-define("_MI_ACHAT_PERM", "Permissions");
-define("_MI_ACHAT_UTILITIES", "Utilities");
+define("_MI_ACHAT_HOME", "首页");
+define("_MI_ACHAT_PURGE", "清除");
+define("_MI_ACHAT_PERM", "权限");
+define("_MI_ACHAT_UTILITIES", "实用工具");
 
-define("_MI_ACHAT_SMNAME1","View logs");
-define("_MI_ACHAT_SMNAME2","View archives");
+define("_MI_ACHAT_SMNAME1","查看聊天记录");
+define("_MI_ACHAT_SMNAME2","查看存档");
 
-define("_MI_ACHAT_GOTO_INDEX","Go to module");
-define("_MI_ACHAT_HELP","Help");
+define("_MI_ACHAT_GOTO_INDEX","跳到模块首页");
+define("_MI_ACHAT_HELP","帮助");
 
 // Templates
-define('_MI_ACHAT_TDESC0',"Main template for main display.");
-define('_MI_ACHAT_TDESC1',"Template for messages display");
-define('_MI_ACHAT_TDESC2',"Template for logs (purge function)");
+define('_MI_ACHAT_TDESC0',"主显示的主模板.");
+define('_MI_ACHAT_TDESC1',"显示消息的模板");
+define('_MI_ACHAT_TDESC2',"logs模板(清除功能))");
 
 // Blocks
-define('_MI_ACHAT_BNAME1','aChat');
-define('_MI_ACHAT_BDESC1','Block which displays the aChat');
-define('_MI_ACHAT_BNAME2','Static aChat');
-define('_MI_ACHAT_BDESC2',"Preview block with lasts messages, without autorefresh and send form");
+define('_MI_ACHAT_BNAME1','聊天室');
+define('_MI_ACHAT_BDESC1','显示聊天室的区块');
+define('_MI_ACHAT_BNAME2','静态聊天室');
+define('_MI_ACHAT_BDESC2',"用最近的消息预览区块, 不需要自动刷新和发送表单");
 
 // Config
-define('_MI_ACHAT_NBRE_MSG_AFF','Number of messages to display');
-define('_MI_ACHAT_NBRE_MSG_AFFDSC','Number of messages to display on the aChat module\'s page(index.php)');
+define('_MI_ACHAT_NBRE_MSG_AFF','要显示的消息数');
+define('_MI_ACHAT_NBRE_MSG_AFFDSC','聊天室模块首页(index.php)要显示的消息数');
 
-define('_MI_ACHAT_TMP_REFRESH','Refresh time');
-define('_MI_ACHAT_TMP_REFRESHDSC','(seconds)<br /> You can put float number, for example 1.5, but a number given to three decimal place max!(otherwise javascript bug.)');
+define('_MI_ACHAT_TMP_REFRESH','刷新时间');
+define('_MI_ACHAT_TMP_REFRESHDSC','(秒)<br /> 你可以输入浮点数，如1.5, 但小数位最多三位!(否则会出现javascript bug.)');
 
-define('_MI_ACHAT_USER_SMILIES','Use the smilies?');
-define('_MI_ACHAT_USE_BBCODES','Use the BBCodes?');
+define('_MI_ACHAT_USER_SMILIES','使用表情图标?');
+define('_MI_ACHAT_USE_BBCODES','使用BBCodes?');
 
-define('_MI_ACHAT_ALLOWED_COLORS','Available colors for the messages');
-define('_MI_ACHAT_ALLOWED_COLORSDESC','Color in RGB hexa format, separated by |, and without #.<br />Example : "000000|FFFFFF" will allow Black and White colors<br />Empty for the 8 default colors.');
+define('_MI_ACHAT_ALLOWED_COLORS','消息可用颜色');
+define('_MI_ACHAT_ALLOWED_COLORSDESC','十六进制的RGB颜色值, 用竖线|分隔, 前面不需要井号#.<br />如 : "000000|FFFFFF" 将会允许使用黑色和白色<br />留空则有8个默认颜色.');
 
-define('_MI_ACHAT_PURGE_FOLDER','Folder for logs (with purge function)');
-define('_MI_ACHAT_PURGE_FOLDERDESC','Empty to use the default folder (modules/aChat/logs)');
+define('_MI_ACHAT_PURGE_FOLDER','logs文件夹 (清除消息时用的)');
+define('_MI_ACHAT_PURGE_FOLDERDESC','留空则使用默认的文件夹 (uploads/achat)');
 
-define('_MI_ACHAT_NICK4GUESTS','Anonymous users can choose their nickname');
-define('_MI_ACHAT_NICK4GUESTSDESC',"Anonymous users nicknames are displayed in grey (can be modified on modules/aChat/templates/aChat.css)");
+define('_MI_ACHAT_NICK4GUESTS','游客可以选择昵称');
+define('_MI_ACHAT_NICK4GUESTSDESC',"游客昵称将用灰色显示(可以通过这个文件修改：modules/aChat/templates/aChat.css)");
 ?>

@@ -1,5 +1,5 @@
 <?php
-// $Id: achat_tpl.php, see below 
+// $Id: achat_tpl.php, see below
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,8 +25,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
-// v 0.2 2006/08/24 21:39:37
+// CrÃ©Ã© par Niluge_Kiwi
+// v 0.232 2007/10/30 13:58:39
 // ======================================================================== //
 //
 //   www.lmdmf.net
@@ -36,20 +36,10 @@
 // ======================================================================== //
 //
 if (!defined('XOOPS_ROOT_PATH')) {
-	exit();
+    exit();
 }
 
-$aChat_url = XOOPS_URL.'/modules/'.$xoopsModule->getVar('dirname');
-$achat_module_header = '<link rel="stylesheet" type="text/css" href="'.$aChat_url.'/templates/aChat.css" />
-<script type="text/javascript">
-	var aChat_url = "' .XOOPS_URL.'/modules/aChat";
-	var aChat_tmp_refresh = '.$xoopsModuleConfig['tmp_refresh'].';
-</script>
-<script src="'.$aChat_url.'/include/js/XHRConnection.js" type="text/javascript"></script>
-<script src="'.$aChat_url.'/include/js/aChat_functions.js" type="text/javascript"></script>';
-
-//$xoopsOption['xoops_module_header'] = $achat_module_header;
-$xoopsTpl->assign('xoops_module_header', $achat_module_header);
+aChat_JS_CSS_Headers($xoopsModuleConfig['tmp_refresh']);
 
 if(isset($postmessage)) $xoopsTpl->assign('postmessage',$postmessage);
 
@@ -62,8 +52,8 @@ $gperm_handler = &xoops_gethandler('groupperm');
 
 $achat_form = '';
 if ($gperm_handler->checkRight('aChatCanPost', 0 , $groups, $module_id)) {
-	include XOOPS_ROOT_PATH."/modules/".$xoopsModule->getVar("dirname")."/include/achat_form.php";
-	$achat_form = $aform->render();
+    include XOOPS_ROOT_PATH."/modules/".$xoopsModule->getVar("dirname")."/include/achat_form.php";
+    $achat_form = $aform->render();
 }
 
 $xoopsTpl->assign('achat_form', $achat_form);

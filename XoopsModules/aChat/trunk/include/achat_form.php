@@ -1,5 +1,5 @@
 <?php
-// $Id: achat_form.php, see below 
+// $Id: achat_form.php, see below
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.2 2006/08/25 16:17:54
 // ======================================================================== //
 //
@@ -37,7 +37,7 @@
 //
 
 if (!defined('XOOPS_ROOT_PATH')) {
-	exit();
+    exit();
 }
 
 $textformsize = isset($textformsize) ? $textformsize : 30;

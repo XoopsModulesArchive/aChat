@@ -1,5 +1,5 @@
 <?php
-// $Id: functions.php, see below 
+// $Id: functions.php, see below
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.23 2007/10/12 22:44:31
 // ======================================================================== //
 //
@@ -37,8 +37,8 @@
 //
 
 function aChat_adminmenu($header = '', $currentoption){
-	/* Nice buttons styles */
-	echo "
+    /* Nice buttons styles */
+    echo "
     	<style type='text/css'>
     	#buttontop { float:left; width:100%; background: #e7e7e7; font-size:12px; line-height:normal; border-top: 1px solid #b7ae88; border-left: 1px solid #b7ae88; border-right: 1px solid #b7ae88; margin: 0; }
     	#buttonbar { float:left; width:100%; background: #e7e7e7 url('" . XOOPS_URL . "/modules/aChat/images/bg.gif') repeat-x left bottom; font-size:12px; line-height:normal; border-left: 1px solid #b7ae88; border-right: 1px solid #b7ae88; margin-bottom: 12px; }
@@ -57,130 +57,130 @@ function aChat_adminmenu($header = '', $currentoption){
 		</style>
     ";
 
-	global $xoopsModule, $xoopsConfig;
+    global $xoopsModule, $xoopsConfig;
 
-	$myts = &MyTextSanitizer::getInstance();
+    $myts = &MyTextSanitizer::getInstance();
 
-	$tblColors = Array_Fill(0,8,'');
-	$tblColors[$currentoption] = 'current';
+    $tblColors = Array_Fill(0,8,'');
+    $tblColors[$currentoption] = 'current';
 
-	include './menu.php';
+    include './menu.php';
 
 
-	echo "<div id='buttontop'>";
-	echo "<table style=\"width: 100%; padding: 0; \" cellspacing=\"0\"><tr>";
-	echo '<td style="font-size: 10px; text-align: left; color: #2F5376; padding: 0 6px; line-height: 18px; valign: top;">';
-	for( $i=0; $i<count($headermenu); $i++ ){
-		echo '<a class="nobutton" href="' . $headermenu[$i]['link'] .'">' . $headermenu[$i]['title'] . '</a> ';
-		if ($i < count($headermenu)-1) {
-			echo "| ";
-		}
-	}
-	echo "<td style=\"font-size: 12px; text-align: right; color: #2F5376; padding: 0 6px; line-height: 18px;\"><b>" . $xoopsModule->name() . " " . _AM_ACHAT_MODULEADMIN . "</b> " . $header . "</td>";
+    echo "<div id='buttontop'>";
+    echo "<table style=\"width: 100%; padding: 0; \" cellspacing=\"0\"><tr>";
+    echo '<td style="font-size: 10px; text-align: left; color: #2F5376; padding: 0 6px; line-height: 18px; valign: top;">';
+    for( $i=0; $i<count($headermenu); $i++ ){
+        echo '<a class="nobutton" href="' . $headermenu[$i]['link'] .'">' . $headermenu[$i]['title'] . '</a> ';
+        if ($i < count($headermenu)-1) {
+            echo "| ";
+        }
+    }
+    echo "<td style=\"font-size: 12px; text-align: right; color: #2F5376; padding: 0 6px; line-height: 18px;\"><b>" . $xoopsModule->name() . " " . _AM_ACHAT_MODULEADMIN . "</b> " . $header . "</td>";
 
-	echo "</tr></table>";
-	echo "</div>";
+    echo "</tr></table>";
+    echo "</div>";
 
-	echo "<div id='buttonbar'>";
-	echo "<ul>";
-	for( $i=0; $i<count($adminmenu); $i++ ){
-		echo '<li id="' . $tblColors[$i] . '"><a href="' . XOOPS_URL . '/modules/'.$xoopsModule->dirname().'/' . $adminmenu[$i]['link'] . '"><span>' . $adminmenu[$i]['title'] . '</span></a></li>';
-	}
-	echo "</ul></div>";
-   echo '<div style="float: left; width: 100%; text-align: center; margin: 0px; padding: 0px">';
+    echo "<div id='buttonbar'>";
+    echo "<ul>";
+    for( $i=0; $i<count($adminmenu); $i++ ){
+        echo '<li id="' . $tblColors[$i] . '"><a href="' . XOOPS_URL . '/modules/'.$xoopsModule->dirname().'/' . $adminmenu[$i]['link'] . '"><span>' . $adminmenu[$i]['title'] . '</span></a></li>';
+    }
+    echo "</ul></div>";
+    echo '<div style="float: left; width: 100%; text-align: center; margin: 0px; padding: 0px">';
 }
 
 function aChat_adminfooter() {
-	echo '<p/>';
-	OpenTable();
-	echo '<div style="text-align: center; vertical-align: center">';
-	echo _AM_ACHAT_CREDIT;
-	echo '</div>';
-	CloseTable();
-	echo '</div>';
+    echo '<p/>';
+    OpenTable();
+    echo '<div style="text-align: center; vertical-align: center">';
+    echo _AM_ACHAT_CREDIT;
+    echo '</div>';
+    CloseTable();
+    echo '</div>';
 }
 
 function aChat_exportTXT ($n) {
-	// fonction qui renvoie un fichier txt contenant les $n 1ers messages
-	
-	global $xoopsDB, $xoopsUser, $xoopsModuleConfig, $myts;
-	include_once XOOPS_ROOT_PATH . '/class/template.php';
-	
-	// Configuration de l'affichage des messages
-	$html = 0;
-	$smiley = $xoopsModuleConfig['use_smilies'];
-	$bbcodes = $xoopsModuleConfig['use_bbcodes'];
-	
-	// Gestion du template
-	$xoopsTpl = new XoopsTpl();
-	$xoopsTpl->assign('title', _MD_ACHAT_TITLE);
+    // fonction qui renvoie un fichier txt contenant les $n 1ers messages
 
-	// Gestion du contenu depuis la base de donnée
-	//$result = $xoopsDB -> query( "SELECT * FROM " . $xoopsDB -> prefix( "achat_messages" ) . " ORDER BY mid ASC", $n);
-	$result = $xoopsDB -> query( "SELECT min(mid) FROM " . $xoopsDB -> prefix( "achat_messages" ));
-	list($minmid) = $xoopsDB->fetchRow( $result );
-	$result = $xoopsDB -> query( "SELECT * FROM " . $xoopsDB -> prefix( "achat_messages" ) . " WHERE mid < ".intval($n)."+".$minmid);
-	
-	while ($myrow = $xoopsDB->fetchArray($result)) {
-		$myrow['uname'] = empty($myrow['uname']) ? XoopsUser::getUnameFromId($myrow['uid']) : $myrow['uname'];
-		$myrow['msg'] =  $myts->displayTarea($myrow['msg'],$html,$smiley,$bbcodes);
-		$myrow['date'] = formatTimestamp($myrow['date']);
-		$sortie[] = $myrow;
-	}
-	$xoopsTpl->assign('messages', $sortie);
-	$texte = $xoopsTpl->fetch('db:achat_viewlogs.html');
+    global $xoopsDB, $xoopsUser, $xoopsModuleConfig, $myts;
+    include_once XOOPS_ROOT_PATH . '/class/template.php';
 
-	return $texte;
+    // Configuration de l'affichage des messages
+    $html = 0;
+    $smiley = $xoopsModuleConfig['use_smilies'];
+    $bbcodes = $xoopsModuleConfig['use_bbcodes'];
+
+    // Gestion du template
+    $xoopsTpl = new XoopsTpl();
+    $xoopsTpl->assign('title', _MD_ACHAT_TITLE);
+
+    // Gestion du contenu depuis la base de donnÃ©e
+    //$result = $xoopsDB -> query( "SELECT * FROM " . $xoopsDB -> prefix( "achat_messages" ) . " ORDER BY mid ASC", $n);
+    $result = $xoopsDB -> query( "SELECT min(mid) FROM " . $xoopsDB -> prefix( "achat_messages" ));
+    list($minmid) = $xoopsDB->fetchRow( $result );
+    $result = $xoopsDB -> query( "SELECT * FROM " . $xoopsDB -> prefix( "achat_messages" ) . " WHERE mid < ".intval($n)."+".$minmid);
+
+    while ($myrow = $xoopsDB->fetchArray($result)) {
+        $myrow['uname'] = empty($myrow['uname']) ? XoopsUser::getUnameFromId($myrow['uid']) : $myrow['uname'];
+        $myrow['msg'] =  $myts->displayTarea($myrow['msg'],$html,$smiley,$bbcodes);
+        $myrow['date'] = formatTimestamp($myrow['date']);
+        $sortie[] = $myrow;
+    }
+    $xoopsTpl->assign('messages', $sortie);
+    $texte = $xoopsTpl->fetch('db:achat_viewlogs.html');
+
+    return $texte;
 }
 
 
 function create_file($name, $content) {
 
-	if($fh =  @fopen($name,'w') ) {
-	    fwrite($fh, $content);
-	    fclose($fh);
-		return true;
-	}
-	return false;
+    if($fh =  @fopen($name,'w') ) {
+        fwrite($fh, $content);
+        fclose($fh);
+        return true;
+    }
+    return false;
 }
 
 function purge_msg($n) {
 
-	global $xoopsDB;
-	
-	//$sql = "DELETE FROM " . $xoopsDB -> prefix( "achat_messages" ) . " ORDER BY mid ASC LIMIT " . intval($n);
-	$result = $xoopsDB -> query( "SELECT min(mid) FROM " . $xoopsDB -> prefix( "achat_messages" ));
-	list($minmid) = $xoopsDB->fetchRow( $result );
-	$sql = "DELETE FROM " . $xoopsDB -> prefix( "achat_messages" ) . " WHERE mid < ".intval($n)."+".$minmid;
+    global $xoopsDB;
 
-	return $xoopsDB->queryF($sql);
+    //$sql = "DELETE FROM " . $xoopsDB -> prefix( "achat_messages" ) . " ORDER BY mid ASC LIMIT " . intval($n);
+    $result = $xoopsDB -> query( "SELECT min(mid) FROM " . $xoopsDB -> prefix( "achat_messages" ));
+    list($minmid) = $xoopsDB->fetchRow( $result );
+    $sql = "DELETE FROM " . $xoopsDB -> prefix( "achat_messages" ) . " WHERE mid < ".intval($n)."+".$minmid;
+
+    return $xoopsDB->queryF($sql);
 }
 
 function delete_msg($mid) {
 
-	global $xoopsDB;
-	
-	$sql = "DELETE FROM " . $xoopsDB -> prefix( "achat_messages" ) . " WHERE mid = " . intval($mid) . "";
-	return $xoopsDB->queryF($sql);
+    global $xoopsDB;
+
+    $sql = "DELETE FROM " . $xoopsDB -> prefix( "achat_messages" ) . " WHERE mid = " . intval($mid) . "";
+    return $xoopsDB->queryF($sql);
 }
 
 function get_nbre_msg() {
 
-	global $xoopsDB;
-	
-	$result = $xoopsDB->query( "SELECT COUNT(*) FROM " . $xoopsDB->prefix( "achat_messages" ) . "" );
-	list( $count ) = $xoopsDB->fetchRow( $result );
-	
-	return $count;
+    global $xoopsDB;
+
+    $result = $xoopsDB->query( "SELECT COUNT(*) FROM " . $xoopsDB->prefix( "achat_messages" ) . "" );
+    list( $count ) = $xoopsDB->fetchRow( $result );
+
+    return $count;
 }
 
 /** From wf downloads
  * save_Permissions()
- * 
+ *
  * @param $groups
  * @param $id
  * @param $perm_name
- * @return 
+ * @return
  **/
 function aChat_save_Permissions($groups, $perm_name)
 {
@@ -189,23 +189,23 @@ function aChat_save_Permissions($groups, $perm_name)
     $Module = & $hModule -> getByDirname('aChat');
 
     $module_id = $Module -> getVar('mid');
-    $gperm_handler = & xoops_gethandler('groupperm'); 
+    $gperm_handler = & xoops_gethandler('groupperm');
 
-    /* 
-	* First, if the permissions are already there, delete them
-	*/ 
-    $gperm_handler -> deleteByModule($module_id, $perm_name, 0); 
     /*
-	*  Save the new permissions
-	*/ 
+     * First, if the permissions are already there, delete them
+     */
+    $gperm_handler -> deleteByModule($module_id, $perm_name, 0);
+    /*
+     *  Save the new permissions
+     */
     if (is_array($groups))
     {
         foreach ($groups as $group_id)
         {
             $gperm_handler -> addRight($perm_name, 0, $group_id, $module_id);
-        } 
-    } 
+        }
+    }
     return $result;
-} 
+}
 
 ?>

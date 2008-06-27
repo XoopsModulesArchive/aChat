@@ -2,92 +2,96 @@ Changelog
 
 v0.23.2(0.3beta)
 - 30.10.2007
+>Nouvelle traduction anglaise, merci √† vpxavier ( http://www.frxoops.org/userinfo.php?uid=966 )!
+>Suppression de la variable de langue _MD_ACHAT_TITLE, remplac√©e par le nom du module dans les options xoops
+
+- 30.10.2007
 >Meilleur gestion de l'inclusion des fichiers .js et du .css
 
 - 22.10.2007
 >Correction d'un bug dans la classe XHRConnection, avec Firefox ( voir "failure code 0x80040111" )
 
 - 12.10.2007
->Correction du bug qui empechait d'accÈder aux pages d'admin (problËmes d'includes, ajouts de "./")
+>Correction du bug qui empechait d'acc√©der aux pages d'admin (probl√®mes d'includes, ajouts de "./")
 
 v0.23.1(0.3beta)
 - 04.09.2007:
->Le bug des blocs est dÈfinitivement corrigÈ.
+>Le bug des blocs est d√©finitivement corrig√©.
 
 - 03.09.2007:
->Correction d'un bug dans l'admin : impossible d'accÈder aux autres onglets que celui principal sous PHP5 ( $HTTP_GET_VARS => $_GET )
+>Correction d'un bug dans l'admin : impossible d'acc√©der aux autres onglets que celui principal sous PHP5 ( $HTTP_GET_VARS => $_GET )
 >Correction d'un bug qui empechait toute utilisation des blocs du module.
 
 v0.23(0.3beta)
 - 17.08.2007:
 >Nettoyage du code javascript : suppression du passage par une div temporaire et test de doublons dans les messages
- Ce n'Ètait plus nÈcessaire depuis l'utilisation d'une pile pour les requÍtes AJAX.
+ Ce n'√©tait plus n√©cessaire depuis l'utilisation d'une pile pour les requ√™tes AJAX.
 >Ajout de commandes IRC like : /ping et /clear
->Ajout des requÍtes d'actualisation dans la pile.
->Ajout d'une pile fifo pour gÈrer l'envoi des messages en AJAX cÙtÈ client: Taille de la pile ‡ 2 actuellement: 
- S'il y a 2 messages en fil d'attente, le 3em message envoyÈ ne sera pas pris en compte.
->Correction d'une mauvaise utilisation de la bibliothËque XHRConnection au nivaeu de la fonction callBack.
+>Ajout des requ√™tes d'actualisation dans la pile.
+>Ajout d'une pile fifo pour g√©rer l'envoi des messages en AJAX c√¥t√© client: Taille de la pile √† 2 actuellement: 
+ S'il y a 2 messages en fil d'attente, le 3em message envoy√© ne sera pas pris en compte.
+>Correction d'une mauvaise utilisation de la biblioth√®que XHRConnection au nivaeu de la fonction callBack.
 
 - 14.08.2007:
->DÈbut de nettoyage/optimisation du code javascript...
->Correction de bug - AmÈlioration : La gestion de l'actualisation automatique comportait une faille : si on floodait, la fonction d'actualisation Ètait appelÈe plusieurs fois 
- (ce qui faisait planter le navigateur client, et utilisait beaucoup de ressources serveur) Nouvelle mÈthode de gestion d'actualisation.
->Les messages ne s'actualisent plus juste aprËs l'ouverture de la page, mais attendent le temps d'actualisation.
+>D√©but de nettoyage/optimisation du code javascript...
+>Correction de bug - Am√©lioration : La gestion de l'actualisation automatique comportait une faille : si on floodait, la fonction d'actualisation √©tait appel√©e plusieurs fois 
+ (ce qui faisait planter le navigateur client, et utilisait beaucoup de ressources serveur) Nouvelle m√©thode de gestion d'actualisation.
+>Les messages ne s'actualisent plus juste apr√®s l'ouverture de la page, mais attendent le temps d'actualisation.
 
 - 13.08.2007:
->Ajout fonctionnalitÈ : Anti rÈpÈtition : Il est dÈsormais impossible d'envoyer plusieurs fois le mÍme message d'affilÈ en moins de 5min.
->Ajout fonctionnalitÈ : DerniËre couleur utilisÈe cochÈe par dÈfaut (pour membres, et pour anonymes : 
- par adresse ip, si dernier message postÈ il y a moins d'un jour, pas fiable ‡ 100% mais mieux que rien...)
+>Ajout fonctionnalit√© : Anti r√©p√©tition : Il est d√©sormais impossible d'envoyer plusieurs fois le m√™me message d'affil√© en moins de 5min.
+>Ajout fonctionnalit√© : Derni√®re couleur utilis√©e coch√©e par d√©faut (pour membres, et pour anonymes : 
+ par adresse ip, si dernier message post√© il y a moins d'un jour, pas fiable √† 100% mais mieux que rien...)
 >Correction du Warning: xoopsOption[template_main] should be defined before including header.php en mode debug
 
 - 12.08.2007:
->Correction des <? en <?php : provoquait l'affichage de la source au lieu de l'exÈcution du code sous wamp(1.7.2) et probablement d'autres configurations serveur.
->Ajout des variables de langage anglais oubliÈes + copie de l'anglais sur les traductions persian et turkish, qui avaient pris pour base l'anglais
+>Correction des <? en <?php : provoquait l'affichage de la source au lieu de l'ex√©cution du code sous wamp(1.7.2) et probablement d'autres configurations serveur.
+>Ajout des variables de langage anglais oubli√©es + copie de l'anglais sur les traductions persian et turkish, qui avaient pris pour base l'anglais
 
 v0.22
 - 01.09.2006:
->Correction du bug avec les caractËres multi octet (Ä, et autres alplabets)
->Correction d'un bug lors de la crÈation du fichier log pdt une purge : les pseudo des anonymes n'Ètaient pas pris en compte
->Correction d'un bug sur le bloc aChat : il prenait la valeur entiËre du temps d'actualisaiton au lieu du nombre ‡ virgule 
+>Correction du bug avec les caract√®res multi octet (¬Ä, et autres alplabets)
+>Correction d'un bug lors de la cr√©ation du fichier log pdt une purge : les pseudo des anonymes n'√©taient pas pris en compte
+>Correction d'un bug sur le bloc aChat : il prenait la valeur enti√®re du temps d'actualisaiton au lieu du nombre √† virgule 
 
 
 v0.21
 - 31.08.2006:
->Optimisation de toutes les requÍtes mysql (Merci ‡ Satanas!)
+>Optimisation de toutes les requ√™tes mysql (Merci √† Satanas!)
 >Correction du bug de la purge qui ne fonctionnait parfois pas
 
 
 v0.2
 - 13.08.2006:
->Recodage partiel du module : crÈation d'une classe message sur le modËle du module Discuss
- (avantage : Gestion plus simple (avec entre autre criteria), inconvÈniant : 0.34% plus long avec une fonction propre (donc nÈgligeable),
- et 28.94 % plus long avec utilisation de criteria (non nÈgligeable, donc pas utilisÈ pour les fonctions d'affichage du tchat : destinÈ au logs et ‡ la gestion admin), 
- tests effectuÈs en demandant l'affichage des 100 derniers messages envoyÈs, moyennes faites sur 15 essais) 
+>Recodage partiel du module : cr√©ation d'une classe message sur le mod√®le du module Discuss
+ (avantage : Gestion plus simple (avec entre autre criteria), inconv√©niant : 0.34% plus long avec une fonction propre (donc n√©gligeable),
+ et 28.94 % plus long avec utilisation de criteria (non n√©gligeable, donc pas utilis√© pour les fonctions d'affichage du tchat : destin√© au logs et √† la gestion admin), 
+ tests effectu√©s en demandant l'affichage des 100 derniers messages envoy√©s, moyennes faites sur 15 essais) 
  
 - 14.08.2006:
->Nouvelle page : viewlogs.php : Permet de voir les anciens messages prÈsents dans la base de donnÈe
- Utilisation de la classe myPagenav modifiÈe pour les besoins du module ( ajouts de variables language et choix de l'ordre )
+>Nouvelle page : viewlogs.php : Permet de voir les anciens messages pr√©sents dans la base de donn√©e
+ Utilisation de la classe myPagenav modifi√©e pour les besoins du module ( ajouts de variables language et choix de l'ordre )
 
 - 15.08.2006:
->Nouvelle page : viewarchives.php : Permet de voir les anciens messages prÈsents dans les fichiers logs crÈÈs lors des purges ( par lecture des fichiers logs par php )
+>Nouvelle page : viewarchives.php : Permet de voir les anciens messages pr√©sents dans les fichiers logs cr√©√©s lors des purges ( par lecture des fichiers logs par php )
 >Ajout d'une option dans le bloc d'affichage du tchat : le choix de la largeur du champ de saisie des messages
->Ajout d'un filtre cÙtÈ client (JavaScript) pour supprimer les messages Notice [PHP]
->Optimisation de l'actualisation lors de l'envoie d'un message ( la requÍte AJAX qui envoie le message rÈcupËre en mm temps les nouveaux messages, 
- alors qu'avant elle ne faisait qu'envoyer le message, et une 2eme requÍte AJAX Ètait lancÈe pour actualiser les messages )
+>Ajout d'un filtre c√¥t√© client (JavaScript) pour supprimer les messages Notice [PHP]
+>Optimisation de l'actualisation lors de l'envoie d'un message ( la requ√™te AJAX qui envoie le message r√©cup√®re en mm temps les nouveaux messages, 
+ alors qu'avant elle ne faisait qu'envoyer le message, et une 2eme requ√™te AJAX √©tait lanc√©e pour actualiser les messages )
 
 - 15.08.2006:
->Fin de recodage pour utiliser la classe message : include/functions.php nettoyÈ de ses fonctions dÈsormais inutiles
->Nouvelle fonctionnalitÈ cÙtÈ admin : possibilitÈ de purger par date : supprime les messages envoyÈs avant les X derniers jours
+>Fin de recodage pour utiliser la classe message : include/functions.php nettoy√© de ses fonctions d√©sormais inutiles
+>Nouvelle fonctionnalit√© c√¥t√© admin : possibilit√© de purger par date : supprime les messages envoy√©s avant les X derniers jours
 
 - 23.08.2006:
->Ajout d'une fonction permettant de cloner le module en un seul clic (utile pour crÈer un module par room)
->Affichage du mid du message ‡ cotÈ de la date et de l'ip
->PossibilitÈ de supprimer un message cotÈ admin en indiquant son mid
->Ajout d'une page d'aide qui sera complÈtÈe au fur-et-‡-mesure
+>Ajout d'une fonction permettant de cloner le module en un seul clic (utile pour cr√©er un module par room)
+>Affichage du mid du message √† cot√© de la date et de l'ip
+>Possibilit√© de supprimer un message cot√© admin en indiquant son mid
+>Ajout d'une page d'aide qui sera compl√©t√©e au fur-et-√†-mesure
 
 - 25.08.2006:
->Les anonymes peuvent dÈsormais choisir leur pseudo (dÈsactivable dans les paramËtres du module)
->Gestion des permissions ajoutÈe : possibilitÈ de choisir les groupes qui ont le droit d'envoyer des messages
+>Les anonymes peuvent d√©sormais choisir leur pseudo (d√©sactivable dans les param√®tres du module)
+>Gestion des permissions ajout√©e : possibilit√© de choisir les groupes qui ont le droit d'envoyer des messages
 
 v0.1
 - 06.08.2006:
