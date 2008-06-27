@@ -1,0 +1,15 @@
+<!-- start Block aChat Display -->
+<link rel="stylesheet" type="text/css" href="<{$xoops_url}>/modules/aChat/templates/aChat.css"/>
+<script type="text/javascript">
+	var aChat_url = "<{$xoops_url}>/modules/aChat";
+	var aChat_tmp_refresh = <{$block.tmp_refresh}>;
+</script>
+<script src="<{$xoops_url}>/modules/aChat/include/js/XHRConnection.js" type="text/javascript"></script>
+<script src="<{$xoops_url}>/modules/aChat/include/js/aChat_functions.js" type="text/javascript"></script>
+
+<div id="achat_messages" style="height: <{$block.div_height}>px;">
+<{include file='db:achat_postmessage.html' messages=$block.messages}>
+</div>
+<div id="achat_div_temp" style="display: none;"></div>
+<{$block.achat_form}>
+<!-- end Block aChat Display -->
