@@ -1,0 +1,37 @@
+Todo
+
+>Optimiser les requetes d'envoie et d'actualisation ( ne pas charger tout xoops par exemple comme avec shoutbox 4)
+
+>Changer la structure des archives sur fichier:
+ Utiliser le format cvs comme dans shoutbox 4
+ Reste encore à déterminer la taille des fichiers:
+  une taille fixe est plus pratique pour ensuite explorer les fichiers archives,
+  mais si l'on supprime ensuite des messages, la taille change, et conserver une taille fixe serait trop compliqué
+
+>Améliorer la purge des messages dans la base de donnée
+ Faire une purge automatique :
+ exemple :
+  à 200 messages on archive 80 messages
+ Avantages : on n'archive pas à chaque message, automatisation
+ Inconvéniant : l'envoie du 200em message va durer beaucoup plus longtemps à traiter
+  solution : ne faire la purge que lors de l'ouverture de la page principale?
+ 
+>Ajouter une liste des utilisateurs sur le tchat.
+ Méthode prévue : au choix
+ - Utiliser le code du bloc "qui est en ligne" de xoops comme dans shoutbox 4
+ - Utiliser une méthode similaire à celle de discuss : gérer la liste de façon plus indépendante
+
+>Ajouter une aide en dessous de la zone de tchat, pour expliquer les bbcodes activés et autres mises en page.
+
+A faire pour une version 0.5 ou 1.0:
+
+Utiliser une structure xml pour envoyer du serveur vers les clients les messages et la liste des utilisateurs.
+Nécessite beaucoup de changements dans le code, mais pas vraiment dans la structure du module.
+
+
+
+
+
+
+
+

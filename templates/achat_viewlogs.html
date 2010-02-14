@@ -1,0 +1,12 @@
+<!-- start aChat View logs -->
+<link rel="stylesheet" type="text/css" href="<{$xoops_url}>/modules/aChat/templates/aChat.css"/>
+<div id="achat_title">
+	<h1><{$xoops_pagetitle}></h1>
+	<h3><{$smarty.const._MD_ACHAT_TITLE_LOGS}></h3>
+</div>
+<{if $pagenav!=''}><{$pagenav}><{/if}>
+<div id="achat_messages" style="overflow: hidden;">
+<{include file='db:achat_postmessage.html'}>
+</div>
+<{if $pagenav2!=''}><{$pagenav2}><{/if}>
+<!-- end aChat View logs -->
