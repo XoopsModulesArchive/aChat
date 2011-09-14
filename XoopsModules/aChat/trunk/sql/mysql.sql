@@ -14,4 +14,4 @@ CREATE TABLE `achat_messages` (
   KEY `uid` (uid),
   KEY `ip` (ip),
   KEY `date` (date)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
