@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// Crï¿½ï¿½ par Niluge_Kiwi
 // v 0.2 2006/08/25 20:11:53
 // ======================================================================== //
 //
@@ -37,63 +37,63 @@
 //
 
 // Menu
-define("_AM_ACHAT_MODULEADMIN","Ä£¿é¹ÜÀí:");
+define("_AM_ACHAT_MODULEADMIN","Ä£ï¿½ï¿½ï¿½ï¿½ï¿½:");
 
-define("_AM_ACHAT_CREDIT", "aChat 0.2 is an original creation of Niluge_KiWi<br />(c) Jully-Augustus 2006");
+define("_AM_ACHAT_CREDIT","aChat 0.2 is an original creation of Niluge_KiWi<br />(c) Jully-Augustus 2006");
 
 // Home
-define("_AM_ACHAT_WELCOME", "»¶Ó­À´µ½aChatÄ£¿é¹ÜÀíºóÌ¨.");
-define("_AM_ACHAT_NBRE_MSG", "Êý¾Ý¿âÖÐµÄÏûÏ¢Êý");
-define("_AM_ACHAT_MESSAGES", "ÏûÏ¢");
-define("_AM_ACHAT_EMPTY_FIELD", "ÇëÌîÐ´±íµ¥.");
+define("_AM_ACHAT_WELCOME","ï¿½ï¿½Ó­ï¿½ï¿½ï¿½ï¿½aChatÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨.");
+define("_AM_ACHAT_NBRE_MSG","ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½");
+define("_AM_ACHAT_MESSAGES","ï¿½ï¿½Ï¢");
+define("_AM_ACHAT_EMPTY_FIELD","ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½.");
 
 // Permissions
-define("_AM_ACHAT_PERM_CANPOST", "¿ÉÒÔ·¢ËÍÏûÏ¢");
+define("_AM_ACHAT_PERM_CANPOST","ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢");
 
 // Purge
-define("_AM_ACHAT_PURGEPERNBRE", "°´ÏûÏ¢ÊýÇå³ý");
-define("_AM_ACHAT_PURGE_HOWMANY", "Çå³ý¶àÉÙÌõÏûÏ¢?");
-define("_AM_ACHAT_PURGE_CREATELOG", "Îª±»Çå³ýµÄÏûÏ¢´´½¨Ò»¸öÁÄÌì¼ÇÂ¼µµ°¸?");
-define("_AM_ACHAT_PURGE_VALIDATE", "È·¶¨ÒªÇå³ý&nbsp;");
-define("_AM_ACHAT_PURGE_SUPPR_NOLOG", "²»Òªlogfile");
-define("_AM_ACHAT_PURGE_ERROR_WRITEFILE", "´´½¨logfileÊ±³öÏÖ´íÎó. ÇëÈ·ÈÏÔÚÄ£¿é²ÎÊýÖÖÉèÖÃµÄÎÄ¼þ¼Ð´æÔÚ£¬²¢ÓÐºÏÊÊµÄÈ¨ÏÞ.");
-define("_AM_ACHAT_PURGE_LOG_WRITTEN", "ÁÄÌì¼ÇÂ¼µµ°¸ÒÑ´´½¨.");
-define("_AM_ACHAT_PURGE_CANCELED", "Çå³ý¶¯×÷ÒÑÈ¡Ïû.");
-define("_AM_ACHAT_PURGE_OK", "Çå³ý³É¹¦.");
-define("_AM_ACHAT_PURGE_NBREMSGDEL", "ÒÑ¾­É¾³ýµÄÏûÏ¢Êý: ");
-define("_AM_ACHAT_PURGE_ERROR", "Çå³ýÊ±³öÏÖ´íÎó.");
-define("_AM_ACHAT_PURGEPERDATE", "°´ÌìÊýÇå³ý");
-define("_AM_ACHAT_PURGE_KEEP_HMDAYS", "±£Áô×î½ü x ÌìµÄÏûÏ¢");
-define("_AM_ACHAT_PURGE_VALIDATE_PERDAY", "ÔÚxxÖ®Ç°·¢±íµÄÏûÏ¢");
-define("_AM_ACHAT_PURGE_VALIDATE_PERDAY2", " last days");
-define("_AM_ACHAT_PURGE_NOMSG", "Ã»ÓÐ¿ÉÉ¾³ýµÄÏûÏ¢.");
+define("_AM_ACHAT_PURGEPERNBRE","ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_AM_ACHAT_PURGE_HOWMANY","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢?");
+define("_AM_ACHAT_PURGE_CREATELOG","Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½?");
+define("_AM_ACHAT_PURGE_VALIDATE","È·ï¿½ï¿½Òªï¿½ï¿½ï¿½&nbsp;");
+define("_AM_ACHAT_PURGE_SUPPR_NOLOG","ï¿½ï¿½Òªlogfile");
+define("_AM_ACHAT_PURGE_ERROR_WRITEFILE","ï¿½ï¿½ï¿½ï¿½logfileÊ±ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½. ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ä¼ï¿½ï¿½Ð´ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½Ðºï¿½ï¿½Êµï¿½È¨ï¿½ï¿½.");
+define("_AM_ACHAT_PURGE_LOG_WRITTEN","ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½.");
+define("_AM_ACHAT_PURGE_CANCELED","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½.");
+define("_AM_ACHAT_PURGE_OK","ï¿½ï¿½ï¿½ï¿½É¹ï¿½.");
+define("_AM_ACHAT_PURGE_NBREMSGDEL","ï¿½Ñ¾ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½: ");
+define("_AM_ACHAT_PURGE_ERROR","ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½.");
+define("_AM_ACHAT_PURGEPERDATE","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_AM_ACHAT_PURGE_KEEP_HMDAYS","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ x ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢");
+define("_AM_ACHAT_PURGE_VALIDATE_PERDAY","ï¿½ï¿½xxÖ®Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢");
+define("_AM_ACHAT_PURGE_VALIDATE_PERDAY2"," last days");
+define("_AM_ACHAT_PURGE_NOMSG","Ã»ï¿½Ð¿ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢.");
 
 // Delete Messages
 define("_AM_ACHAT_DELETEMSG","Supprimer un message");
 define("_AM_ACHAT_DELETEMSG_MID","Mid du message ?supprimer<br />(dernier num&eacute;ro affich&eacute; lors du survol du pseudo du posteur du message,<br /> visible uniquement par les admin)");
 define("_AM_ACHAT_DELETEMSG_OK","Message num&eacute;ro %u supprim&eacute;.");
-define("_AM_ACHAT_DELETEMSG_ERROR","Une erreur est survenue lors de la suppression du message numéro %u.");
+define("_AM_ACHAT_DELETEMSG_ERROR","Une erreur est survenue lors de la suppression du message numï¿½ro %u.");
 
 // Utilities ( Clone ) ( from myHome module )
-define("_AM_ACHAT_CLONE", "Ä£¿é¿ËÂ¡");
+define("_AM_ACHAT_CLONE","Ä£ï¿½ï¿½ï¿½Â¡");
 
-define("_AM_ACHAT_CLONENAME", "¿ËÂ¡Ãû³Æ<br /><i>
+define("_AM_ACHAT_CLONENAME","ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½<br /><i>
                                          <ul>
-                                             <li>²»Òª³¬¹ý16¸ö×Ö·û</li>
-                                             <li>²»ÄÜÓÃÌØÊâ×Ö·û</li>
-                                             <li>²»ÄÜÓÃÒÑÓÐÄ£¿éµÄÃû³Æ</li>
-                                             <li>¿ÉÒÔÓÃ´óÐ´ºÍ¿Õ¸ñ</li>
+                                             <li>ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½16ï¿½ï¿½ï¿½Ö·ï¿½</li>
+                                             <li>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½</li>
+                                             <li>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</li>
+                                             <li>ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½Ð´ï¿½Í¿Õ¸ï¿½</li>
                                          </ul></i>
-                                         ÀýÈç: 'My Module 01'. ");
+                                         ï¿½ï¿½ï¿½ï¿½: 'My Module 01'. ");
 
-define("_AM_ACHAT_SUBMIT",	"¿ËÂ¡!");
-define("_AM_ACHAT_CLEAR",	"É¾³ý");
-define("_AM_ACHAT_CANCEL",	"È¡Ïû");
+define("_AM_ACHAT_SUBMIT",	"ï¿½ï¿½Â¡!");
+define("_AM_ACHAT_CLEAR",	"É¾ï¿½ï¿½");
+define("_AM_ACHAT_CANCEL",	"È¡ï¿½ï¿½");
 
-define("_AM_ACHAT_CLONED", "Ä£¿éÒÑ³É¹¦¿ËÂ¡");
-define("_AM_ACHAT_MODULEXISTS", "Õâ¸öÄ£¿éÒÑ¾­´æÔÚ");
-define("_AM_ACHAT_NOTCLONED", "¿ËÂ¡ÉèÖÃÓÐÎó");
-define("_AM_ACHAT_CLONE_TROUBLE", "ÄúµÄ·þÎñÆ÷ÉèÖÃ²»ÔÊÐí¿ËÂ¡²Ù×÷.
-					 ÇëÔÚÒ»¸ö¿ÉÒÔ¸ü¸ÄÈ¨ÏÞµÄ·þÎñÆ÷ÖØÐÂ²âÊÔ.
-                                         (ÀýÈç, ±¾µØ·þÎñÆ÷)");
+define("_AM_ACHAT_CLONED","Ä£ï¿½ï¿½ï¿½Ñ³É¹ï¿½ï¿½ï¿½Â¡");
+define("_AM_ACHAT_MODULEXISTS","ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_AM_ACHAT_NOTCLONED","ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_AM_ACHAT_CLONE_TROUBLE","ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½.
+					 ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½È¨ï¿½ÞµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½.
+                                         (ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ø·ï¿½ï¿½ï¿½ï¿½ï¿½)");
 ?>

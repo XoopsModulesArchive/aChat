@@ -38,15 +38,15 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME', '聊天室');
+define('_MI_ACHAT_NAME','聊天室');
 // A brief description of this module
 define('_MI_ACHAT_DESC','聊天室模块, 使用AJAX!');
 
 // Menu
-define("_MI_ACHAT_HOME", "首页");
-define("_MI_ACHAT_PURGE", "清除");
-define("_MI_ACHAT_PERM", "权限");
-define("_MI_ACHAT_UTILITIES", "实用工具");
+define("_MI_ACHAT_HOME","首页");
+define("_MI_ACHAT_PURGE","清除");
+define("_MI_ACHAT_PERM","权限");
+define("_MI_ACHAT_UTILITIES","实用工具");
 
 define("_MI_ACHAT_SMNAME1","查看聊天记录");
 define("_MI_ACHAT_SMNAME2","查看存档");
