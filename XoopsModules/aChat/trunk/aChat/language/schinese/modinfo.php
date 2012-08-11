@@ -24,7 +24,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// CrИИ par Niluge_Kiwi
+// CrО©╫О©╫ par Niluge_Kiwi
 // v 0.2 2006/08/25 20:11:36
 // ======================================================================== //
 //
@@ -38,49 +38,49 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME', 'адлЛйр');
+define('_MI_ACHAT_NAME','О©╫О©╫О©╫О©╫О©╫О©╫');
 // A brief description of this module
-define('_MI_ACHAT_DESC','адлЛйрдё©И, й╧сцAJAX!');
+define('_MI_ACHAT_DESC','О©╫О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫, й╧О©╫О©╫AJAX!');
 
 // Menu
-define("_MI_ACHAT_HOME", "йврЁ");
-define("_MI_ACHAT_PURGE", "гЕЁЩ");
-define("_MI_ACHAT_PERM", "х╗оч");
-define("_MI_ACHAT_UTILITIES", "й╣сц╧╓╬ъ");
+define("_MI_ACHAT_HOME","О©╫О©╫рЁ");
+define("_MI_ACHAT_PURGE","О©╫О©╫О©╫");
+define("_MI_ACHAT_PERM","х╗О©╫О©╫");
+define("_MI_ACHAT_UTILITIES","й╣О©╫ц╧О©╫О©╫О©╫");
 
-define("_MI_ACHAT_SMNAME1","╡И©╢адлЛ╪гб╪");
-define("_MI_ACHAT_SMNAME2","╡И©╢╢Ф╣╣");
+define("_MI_ACHAT_SMNAME1","О©╫И©╢О©╫О©╫О©╫О©╫О©╫б╪");
+define("_MI_ACHAT_SMNAME2","О©╫И©╢О©╫Ф╣╣");
 
-define("_MI_ACHAT_GOTO_INDEX","лЬ╣╫дё©ИйврЁ");
-define("_MI_ACHAT_HELP","╟ОжЗ");
+define("_MI_ACHAT_GOTO_INDEX","О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫рЁ");
+define("_MI_ACHAT_HELP","О©╫О©╫О©╫О©╫");
 
 // Templates
-define('_MI_ACHAT_TDESC0',"жВотй╬╣джВдё╟Е.");
-define('_MI_ACHAT_TDESC1',"отй╬оШо╒╣ддё╟Е");
-define('_MI_ACHAT_TDESC2',"logsдё╟Е(гЕЁЩ╧╕дэ))");
+define('_MI_ACHAT_TDESC0',"О©╫О©╫О©╫О©╫й╬О©╫О©╫О©╫О©╫дёО©╫О©╫.");
+define('_MI_ACHAT_TDESC1',"О©╫О©╫й╬О©╫О©╫о╒О©╫О©╫дёО©╫О©╫");
+define('_MI_ACHAT_TDESC2',"logsдёО©╫О©╫(О©╫О©╫О©╫О©╫О©╫О©╫О©╫))");
 
 // Blocks
-define('_MI_ACHAT_BNAME1','адлЛйр');
-define('_MI_ACHAT_BDESC1','отй╬адлЛйр╣дгЬ©И');
-define('_MI_ACHAT_BNAME2','╬╡л╛адлЛйр');
-define('_MI_ACHAT_BDESC2',"сцвН╫Э╣доШо╒т╓ююгЬ©И, ╡╩пХр╙вт╤╞к╒пб╨м╥╒км╠М╣╔");
+define('_MI_ACHAT_BNAME1','О©╫О©╫О©╫О©╫О©╫О©╫');
+define('_MI_ACHAT_BDESC1','О©╫О©╫й╬О©╫О©╫О©╫О©╫О©╫р╣О©╫О©╫О©╫О©╫О©╫');
+define('_MI_ACHAT_BNAME2','О©╫О©╫л╛О©╫О©╫О©╫О©╫О©╫О©╫');
+define('_MI_ACHAT_BDESC2',"О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒т╓О©╫О©╫О©╫О©╫О©╫О©╫, О©╫О©╫О©╫О©╫р╙О©╫т╤О©╫к╒О©╫б╨м╥О©╫О©╫м╠О©╫О©╫");
 
 // Config
-define('_MI_ACHAT_NBRE_MSG_AFF','р╙отй╬╣доШо╒йЩ');
-define('_MI_ACHAT_NBRE_MSG_AFFDSC','адлЛйрдё©ИйврЁ(index.php)р╙отй╬╣доШо╒йЩ');
+define('_MI_ACHAT_NBRE_MSG_AFF','р╙О©╫О©╫й╬О©╫О©╫О©╫О©╫о╒О©╫О©╫');
+define('_MI_ACHAT_NBRE_MSG_AFFDSC','О©╫О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫рЁ(index.php)р╙О©╫О©╫й╬О©╫О©╫О©╫О©╫о╒О©╫О©╫');
 
-define('_MI_ACHAT_TMP_REFRESH','к╒пбй╠╪Д');
-define('_MI_ACHAT_TMP_REFRESHDSC','(цК)<br /> дЦ©иртйДхК╦║╣ЦйЩё╛хГ1.5, ╣╚п║йЩн╩вН╤ЮхЩн╩!(╥ЯтР╩АЁЖожjavascript bug.)');
+define('_MI_ACHAT_TMP_REFRESH','к╒О©╫О©╫й╠О©╫О©╫');
+define('_MI_ACHAT_TMP_REFRESHDSC','(О©╫О©╫)<br /> О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫К╦║О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫1.5, О©╫О©╫п║О©╫О©╫н╩О©╫О©╫О©╫О©╫О©╫н╩!(О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫javascript bug.)');
 
-define('_MI_ACHAT_USER_SMILIES','й╧сц╠МгИм╪╠Й?');
-define('_MI_ACHAT_USE_BBCODES','й╧сцBBCodes?');
+define('_MI_ACHAT_USER_SMILIES','й╧О©╫ц╠О©╫О©╫О©╫м╪О©╫О©╫?');
+define('_MI_ACHAT_USE_BBCODES','й╧О©╫О©╫BBCodes?');
 
-define('_MI_ACHAT_ALLOWED_COLORS','оШо╒©исцяуи╚');
-define('_MI_ACHAT_ALLOWED_COLORSDESC','й╝аЫ╫Ьжф╣дRGBяуи╚ж╣, сцйЗоъ|╥ж╦Т, г╟цФ╡╩пХр╙╬╝╨е#.<br />хГ : "000000|FFFFFF" ╫╚╩АтйпМй╧сц╨зи╚╨м╟ви╚<br />аТ©утРсп8╦Жд╛хояуи╚.');
+define('_MI_ACHAT_ALLOWED_COLORS','О©╫О©╫о╒О©╫О©╫О©╫О©╫О©╫О©╫и╚');
+define('_MI_ACHAT_ALLOWED_COLORSDESC','й╝О©╫О©╫О©╫О©╫О©╫ф╣О©╫RGBО©╫О©╫и╚ж╣, О©╫О©╫О©╫О©╫О©╫О©╫|О©╫ж╦О©╫, г╟О©╫Ф╡╩О©╫О©╫р╙О©╫О©╫О©╫О©╫#.<br />О©╫О©╫ : "000000|FFFFFF" О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╧О©╫ц╨О©╫и╚О©╫м╟О©╫и╚<br />О©╫О©╫О©╫О©╫О©╫О©╫О©╫8О©╫О©╫д╛О©╫О©╫О©╫О©╫и╚.');
 
-define('_MI_ACHAT_PURGE_FOLDER','logsнд╪Ч╪п (гЕЁЩоШо╒й╠сц╣д)');
-define('_MI_ACHAT_PURGE_FOLDERDESC','аТ©утРй╧сцд╛хо╣днд╪Ч╪п (uploads/achat)');
+define('_MI_ACHAT_PURGE_FOLDER','logsО©╫д╪О©╫О©╫О©╫ (О©╫О©╫О©╫О©╫О©╫о╒й╠О©╫ц╣О©╫)');
+define('_MI_ACHAT_PURGE_FOLDERDESC','О©╫О©╫О©╫О©╫О©╫й╧О©╫О©╫д╛О©╫о╣О©╫О©╫д╪О©╫О©╫О©╫ (uploads/achat)');
 
-define('_MI_ACHAT_NICK4GUESTS','сн©м©иртя║тЯЙгЁф');
-define('_MI_ACHAT_NICK4GUESTSDESC',"сн©мЙгЁф╫╚сц╩ри╚отй╬(©иртм╗╧ЩуБ╦Жнд╪Чпч╦дё╨modules/aChat/templates/aChat.css)");
+define('_MI_ACHAT_NICK4GUESTS','О©╫н©м©О©╫О©╫О©╫я║О©╫О©╫О©╫гЁО©╫');
+define('_MI_ACHAT_NICK4GUESTSDESC',"О©╫н©О©╫О©╫гЁф╫О©╫О©╫ц╩О©╫и╚О©╫О©╫й╬(О©╫О©╫О©╫О©╫м╗О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫ч╦дёО©╫modules/aChat/templates/aChat.css)");
 ?>

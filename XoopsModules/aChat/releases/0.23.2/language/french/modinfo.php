@@ -24,7 +24,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.2 2006/08/25 20:11:35
 // ======================================================================== //
 //
@@ -38,15 +38,15 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME', 'aChat');
+define('_MI_ACHAT_NAME','aChat');
 // A brief description of this module
 define('_MI_ACHAT_DESC','un module de Chat, Tagboard avec AJAX!');
 
 // Menu
-define("_MI_ACHAT_HOME", "Accueil");
-define("_MI_ACHAT_PURGE", "Purge");
-define("_MI_ACHAT_PERM", "Permissions");
-define("_MI_ACHAT_UTILITIES", "Utilitaires");
+define("_MI_ACHAT_HOME","Accueil");
+define("_MI_ACHAT_PURGE","Purge");
+define("_MI_ACHAT_PERM","Permissions");
+define("_MI_ACHAT_UTILITIES","Utilitaires");
 
 define("_MI_ACHAT_SMNAME1","Voir les logs");
 define("_MI_ACHAT_SMNAME2","Voir les archives");
@@ -76,7 +76,7 @@ define('_MI_ACHAT_USER_SMILIES','Utiliser les smileys?');
 define('_MI_ACHAT_USE_BBCODES','Utiliser les BBCodes?');
 
 define('_MI_ACHAT_ALLOWED_COLORS','Couleurs disponibles pour les messages');
-define('_MI_ACHAT_ALLOWED_COLORSDESC','Code couleur RVB hexad&eacute;cimal, s&eacute;par&eacute;s par |, sans le # devant.<br />Exemple : "000000|FFFFFF" permettra des messages en noir et en blanc.<br />Laissez vide pour utiliser les 8 couleurs par défaut.');
+define('_MI_ACHAT_ALLOWED_COLORSDESC','Code couleur RVB hexad&eacute;cimal, s&eacute;par&eacute;s par |, sans le # devant.<br />Exemple : "000000|FFFFFF" permettra des messages en noir et en blanc.<br />Laissez vide pour utiliser les 8 couleurs par dÃ©faut.');
 
 define('_MI_ACHAT_PURGE_FOLDER','R&eacute;pertoire contenant les fichiers logs cr&eacute;&eacute;s par la purge.');
 define('_MI_ACHAT_PURGE_FOLDERDESC','Laissez vide pour utiliser le r&eacute;pertoire par d&eacute;faut (modules/aChat/logs)');

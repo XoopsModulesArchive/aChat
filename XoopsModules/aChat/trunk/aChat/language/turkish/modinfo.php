@@ -24,7 +24,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.2 2006/08/25 20:11:36
 // ======================================================================== //
 //  
@@ -33,7 +33,7 @@
 // kiwiiii@gmail.com
 //
 // ======================================================================== //
-//    Türkçe çeviri: Engin YILDIRIM
+//    TÃ¼rkÃ§e Ã§eviri: Engin YILDIRIM
 //                  (By BaCKStagE)
 //                                 admin-denetim@hotmail.com
 //     www.xoopshocasi.com
@@ -42,49 +42,49 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME', 'aChat');
+define('_MI_ACHAT_NAME','aChat');
 // A brief description of this module
-define('_MI_ACHAT_DESC','Sohbet Etmek için Hazırlanmış Bir Modül Hamurunda Ajax yatıyor!');
+define('_MI_ACHAT_DESC','Sohbet Etmek iÃ§in HazÃ½rlanmÃ½Ã¾ Bir ModÃ¼l Hamurunda Ajax yatÃ½yor!');
 
 // Menu
-define("_MI_ACHAT_HOME", "Anasayfa");
-define("_MI_ACHAT_PURGE", "Temizle");
-define("_MI_ACHAT_PERM", "İzinler");
-define("_MI_ACHAT_UTILITIES", "Avantajları");
+define("_MI_ACHAT_HOME","Anasayfa");
+define("_MI_ACHAT_PURGE","Temizle");
+define("_MI_ACHAT_PERM","Ãzinler");
+define("_MI_ACHAT_UTILITIES","AvantajlarÃ½");
 
-define("_MI_ACHAT_SMNAME1","Logları incele");
-define("_MI_ACHAT_SMNAME2","Arşivi incele");
+define("_MI_ACHAT_SMNAME1","LoglarÃ½ incele");
+define("_MI_ACHAT_SMNAME2","ArÃ¾ivi incele");
 
-define("_MI_ACHAT_GOTO_INDEX","Modüle git");
-define("_MI_ACHAT_HELP","Yardım");
+define("_MI_ACHAT_GOTO_INDEX","ModÃ¼le git");
+define("_MI_ACHAT_HELP","YardÃ½m");
 
 // Templates
-define('_MI_ACHAT_TDESC0',"Ana Template İçin Kalıp.");
-define('_MI_ACHAT_TDESC1',"Mesajlar İçin Kalıp Gösterir");
-define('_MI_ACHAT_TDESC2',"Loglar İçin Kalıp (temizlik için)");
+define('_MI_ACHAT_TDESC0',"Ana Template ÃÃ§in KalÃ½p.");
+define('_MI_ACHAT_TDESC1',"Mesajlar ÃÃ§in KalÃ½p GÃ¶sterir");
+define('_MI_ACHAT_TDESC2',"Loglar ÃÃ§in KalÃ½p (temizlik iÃ§in)");
 
 // Blocks
 define('_MI_ACHAT_BNAME1','aChat');
-define('_MI_ACHAT_BDESC1','aChat gösteren blok');
+define('_MI_ACHAT_BDESC1','aChat gÃ¶steren blok');
 define('_MI_ACHAT_BNAME2','Sabit aChat');
-define('_MI_ACHAT_BDESC2',"Sonlar mesajlarıyla ön gösterim bloğu, autorefresh olmadan gönderim formu");
+define('_MI_ACHAT_BDESC2',"Sonlar mesajlarÃ½yla Ã¶n gÃ¶sterim bloÃ°u, autorefresh olmadan gÃ¶nderim formu");
 
 // Config
-define('_MI_ACHAT_NBRE_MSG_AFF','Mesaj gösterim sayısı');
-define('_MI_ACHAT_NBRE_MSG_AFFDSC','Modül sayfasında gösterilecek mesaj sayısı ?(index.php)');
+define('_MI_ACHAT_NBRE_MSG_AFF','Mesaj gÃ¶sterim sayÃ½sÃ½');
+define('_MI_ACHAT_NBRE_MSG_AFFDSC','ModÃ¼l sayfasÃ½nda gÃ¶sterilecek mesaj sayÃ½sÃ½ ?(index.php)');
 
-define('_MI_ACHAT_TMP_REFRESH','Yenileme Süresi');
-define('_MI_ACHAT_TMP_REFRESHDSC','(saniye)<br /> Örneğin 1.5');
+define('_MI_ACHAT_TMP_REFRESH','Yenileme SÃ¼resi');
+define('_MI_ACHAT_TMP_REFRESHDSC','(saniye)<br /> Ã–rneÃ°in 1.5');
 
-define('_MI_ACHAT_USER_SMILIES','Smiley(Gülücük) Kullanılsın mı?');
-define('_MI_ACHAT_USE_BBCODES','BBCODE Kullanılsın mı?');
+define('_MI_ACHAT_USER_SMILIES','Smiley(GÃ¼lÃ¼cÃ¼k) KullanÃ½lsÃ½n mÃ½?');
+define('_MI_ACHAT_USE_BBCODES','BBCODE KullanÃ½lsÃ½n mÃ½?');
 
-define('_MI_ACHAT_ALLOWED_COLORS','Mesajlar İçin izin verilen Renkler');
-define('_MI_ACHAT_ALLOWED_COLORSDESC','Mesajlara renk eklemek istiyorsanız RGB renk kodlarını kullanın örnek olarak siyah ve beyaz 000000|FFFFFF aralarına | koyun<br />Şuanda 8 Ana renk eklenmiş durumda.');
+define('_MI_ACHAT_ALLOWED_COLORS','Mesajlar ÃÃ§in izin verilen Renkler');
+define('_MI_ACHAT_ALLOWED_COLORSDESC','Mesajlara renk eklemek istiyorsanÃ½z RGB renk kodlarÃ½nÃ½ kullanÃ½n Ã¶rnek olarak siyah ve beyaz 000000|FFFFFF aralarÃ½na | koyun<br />Ãuanda 8 Ana renk eklenmiÃ¾ durumda.');
 
-define('_MI_ACHAT_PURGE_FOLDER',Silinen Mesajlar Dosyası ');
-define('_MI_ACHAT_PURGE_FOLDERDESC','Silinen Mesajların Depo Edildiği Dosya (modules/aChat/logs)');
+define('_MI_ACHAT_PURGE_FOLDER',Silinen Mesajlar DosyasÃ½ ');
+define('_MI_ACHAT_PURGE_FOLDERDESC','Silinen MesajlarÃ½n Depo EdildiÃ°i Dosya (modules/aChat/logs)');
 
 define('_MI_ACHAT_NICK4GUESTS','Misafirlerin Nicklerini Belirle');
-define('_MI_ACHAT_NICK4GUESTSDESC',"Misafirlerin Nicklerini Gri Göster (Düzenlemek icin dosya yolu modules/aChat/templates/aChat.css)");
+define('_MI_ACHAT_NICK4GUESTSDESC',"Misafirlerin Nicklerini Gri GÃ¶ster (DÃ¼zenlemek icin dosya yolu modules/aChat/templates/aChat.css)");
 ?>

@@ -31,15 +31,15 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME', 'aChat');
+define('_MI_ACHAT_NAME','aChat');
 // A brief description of this module
-define('_MI_ACHAT_DESC','un m&oacute;dulo de chat, ¡Tagboard con AJAX!');
+define('_MI_ACHAT_DESC','un m&oacute;dulo de chat, Â¡Tagboard con AJAX!');
 
 // Menu
-define("_MI_ACHAT_HOME", "Inicio");
-define("_MI_ACHAT_PURGE", "Purgar");
-define("_MI_ACHAT_PERM", "Permisos");
-define("_MI_ACHAT_UTILITIES", "Utilidades");
+define("_MI_ACHAT_HOME","Inicio");
+define("_MI_ACHAT_PURGE","Purgar");
+define("_MI_ACHAT_PERM","Permisos");
+define("_MI_ACHAT_UTILITIES","Utilidades");
 
 define("_MI_ACHAT_SMNAME1","Ver los logs");
 define("_MI_ACHAT_SMNAME2","Ver el historial");
@@ -65,8 +65,8 @@ define('_MI_ACHAT_NBRE_MSG_AFFDSC','N&uacute;mero de mensajes enviados que se mu
 define('_MI_ACHAT_TMP_REFRESH','Tiempo de actualizaci&oacute;n de los mensajes');
 define('_MI_ACHAT_TMP_REFRESHDSC','(en segundos)<br /> Puede colocar un n&uacute;mero con decimal.<br />Por ejemplo: 1.5<br />CUIDADO: m&aacute;s de 3 segundos provoca un bug.');
 
-define('_MI_ACHAT_USER_SMILIES','¿Utilizar caritas (smilies)?');
-define('_MI_ACHAT_USE_BBCODES','¿Utilizar BBCodes?');
+define('_MI_ACHAT_USER_SMILIES','Â¿Utilizar caritas (smilies)?');
+define('_MI_ACHAT_USE_BBCODES','Â¿Utilizar BBCodes?');
 
 define('_MI_ACHAT_ALLOWED_COLORS','Colores disponibles para los mensajes');
 define('_MI_ACHAT_ALLOWED_COLORSDESC','C&oacute;digo de color RGB hexadecimal, separados con |, sin el # por delante.<br />Ejemplo : "000000|FFFFFF" abilitar&aacute; colores en negro y blanco.<br />Dejar vac&iacute;o para usar los 8 colores por defecto.');
@@ -74,6 +74,6 @@ define('_MI_ACHAT_ALLOWED_COLORSDESC','C&oacute;digo de color RGB hexadecimal, s
 define('_MI_ACHAT_PURGE_FOLDER','Carpeta que contiene los archivos logs generados al purgar.');
 define('_MI_ACHAT_PURGE_FOLDERDESC','Dejar vac&iacute;o para usar la carpeta por defecto (modules/aChat/logs)');
 
-define('_MI_ACHAT_NICK4GUESTS','¿Permitir que los usuario an&oacute;nimos coloquen un alias?');
+define('_MI_ACHAT_NICK4GUESTS','Â¿Permitir que los usuario an&oacute;nimos coloquen un alias?');
 define('_MI_ACHAT_NICK4GUESTSDESC',"Los alias de los usuarios an&oacute;nimos son grises para diferenciarlos (color modificable en la hoja de estilos css (modules/aChat/templates/aChat.css)");
 ?>

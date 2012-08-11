@@ -39,15 +39,15 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME', 'aChat');
+define('_MI_ACHAT_NAME','aChat');
 // A brief description of this module
 define('_MI_ACHAT_DESC','A module for Chatting, a TagBoard with AJAX!');
 
 // Menu
-define("_MI_ACHAT_HOME", "Home");
-define("_MI_ACHAT_PURGE", "Purge");
-define("_MI_ACHAT_PERM", "Permissions");
-define("_MI_ACHAT_UTILITIES", "Utilities");
+define("_MI_ACHAT_HOME","Home");
+define("_MI_ACHAT_PURGE","Purge");
+define("_MI_ACHAT_PERM","Permissions");
+define("_MI_ACHAT_UTILITIES","Utilities");
 
 define("_MI_ACHAT_SMNAME1","View logs");
 define("_MI_ACHAT_SMNAME2","View archives");
