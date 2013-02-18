@@ -1,5 +1,4 @@
 <?php
-// $Id: modinfo.php, see below 
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,8 +24,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// CrÃ©Ã© par Niluge_Kiwi, corrigÃ© par vpxavier <vpxavier@gmail.com>
-// v 0.232 2007/10/31 23:23:53
+// Créé par Niluge_Kiwi
+// v 0.2 2006/08/25 20:11:36
 // ======================================================================== //
 //
 //   www.lmdmf.net
@@ -39,15 +38,15 @@
 // Module Info
 
 // The name of this module
-define('_MI_ACHAT_NAME','aChat');
+define('_MI_ACHAT_NAME', 'aChat');
 // A brief description of this module
 define('_MI_ACHAT_DESC','A module for Chatting, a TagBoard with AJAX!');
 
 // Menu
-define("_MI_ACHAT_HOME","Home");
-define("_MI_ACHAT_PURGE","Purge");
-define("_MI_ACHAT_PERM","Permissions");
-define("_MI_ACHAT_UTILITIES","Utilities");
+define("_MI_ACHAT_HOME", "Home");
+define("_MI_ACHAT_PURGE", "Purge");
+define("_MI_ACHAT_PERM", "Permissions");
+define("_MI_ACHAT_UTILITIES", "Utilities");
 
 define("_MI_ACHAT_SMNAME1","View logs");
 define("_MI_ACHAT_SMNAME2","View archives");
@@ -68,20 +67,20 @@ define('_MI_ACHAT_BDESC2',"Preview block with lasts messages, without autorefres
 
 // Config
 define('_MI_ACHAT_NBRE_MSG_AFF','Number of messages to display');
-define('_MI_ACHAT_NBRE_MSG_AFFDSC','Number of messages to display on the aChat module\'s page(index.php)');
+define('_MI_ACHAT_NBRE_MSG_AFFDSC','Number of messages to display on the pages of the module aChat (index.php)');
 
 define('_MI_ACHAT_TMP_REFRESH','Refresh time');
-define('_MI_ACHAT_TMP_REFRESHDSC','(seconds)<br /> You can put float number, for example 1.5, but a number given to three decimal place max!(otherwise javascript bug.)');
+define('_MI_ACHAT_TMP_REFRESHDSC','(seconds)<br /> You can put float numbur, for example 1.5, but a number given to three decimal place max!(otherwise javascript bug.)');
 
 define('_MI_ACHAT_USER_SMILIES','Use the smilies?');
 define('_MI_ACHAT_USE_BBCODES','Use the BBCodes?');
 
 define('_MI_ACHAT_ALLOWED_COLORS','Available colors for the messages');
-define('_MI_ACHAT_ALLOWED_COLORSDESC','Color in RGB hexa format, separated by |, and without #.<br />Example : "000000|FFFFFF" will allow Black and White colors<br />Empty for the 8 default colors.');
+define('_MI_ACHAT_ALLOWED_COLORSDESC','Color on RGB hexa color, separated by |, and without #.<br />Example : "000000|FFFFFF" will allow Black and White colors<br />Empty for the 8 default colors.');
 
 define('_MI_ACHAT_PURGE_FOLDER','Folder for logs (with purge function)');
 define('_MI_ACHAT_PURGE_FOLDERDESC','Empty to use the default folder (modules/aChat/logs)');
 
-define('_MI_ACHAT_NICK4GUESTS','Anonymous users can choose their nickname');
-define('_MI_ACHAT_NICK4GUESTSDESC',"Anonymous users nicknames are displayed in grey (can be modified on modules/aChat/templates/aChat.css)");
+define('_MI_ACHAT_NICK4GUESTS','Anonymous can choose their nickname');
+define('_MI_ACHAT_NICK4GUESTSDESC',"Anonymous nicknames are displayed in grey (can be modified on modules/aChat/templates/aChat.css)");
 ?>

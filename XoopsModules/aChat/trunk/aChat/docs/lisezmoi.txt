@@ -1,4 +1,4 @@
-Niluge_Kiwi - 26.08.2006
+Niluge_KiWi - 26.12.2007
 --------------------------------------------------------
 Module 
                      aChat v0.2
@@ -76,6 +76,13 @@ Support par mail dans la limite du possible...
 
 kiwiiii@gmail.com
 
+
+--------------------------------------------------------
+
+Problèmes connus:
+- aChat ne fonctionne pas avec multiMenu : il faut effectuer une petite modification pour que ça fonctionne.
+Tout est expliqué dans Comment_faire_marcher_aChat_et_MultiMenu.txt 
+(la méthode peut être appliquée à tout autre module utilisant la fonction javascript window.onload)
 
 --------------------------------------------------------
 

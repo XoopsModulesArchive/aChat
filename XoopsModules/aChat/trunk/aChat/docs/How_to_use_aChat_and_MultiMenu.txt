@@ -1,0 +1,22 @@
+How to use aChat and multiMenu at the same time (tested with the 1.8 version of multiMenu):
+
+1) copy modules\multiMenu\scripts\start.js into include\
+
+2) modify the xoops theme used (themes\my_theme\theme.html) to include include\start.js: Add this just before the header include:
+<script type="text/javascript" src="<{$xoops_url}>/include/start.js"></script>
+
+3) in modules\aChat\include\js\aChat_functions.js
+  line 105, replace : 
+window.onload = achat_init;
+  by: 
+addToStart(achat_init);
+
+3) remove (or just comment) the calls of start.js in the multiMenu templates : modules\multiMenu\templates\
+  to remove :
+<script type="text/javascript" src="<{$xoops_url}>/modules/multiMenu/script/start.js"></script>
+  in files :
+multimenu_picslide.html
+multimenu_dyn_vert2.html
+multimenu_dyn_context2.html
+
+4) Update the theme, multiMenu, and aChat with xoops admins.

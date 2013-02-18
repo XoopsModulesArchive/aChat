@@ -1,5 +1,5 @@
 <?php
-// $Id: achat_tpl.php, see below
+// $Id: achat_tpl.php, see below 
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// CrÃ©Ã© par Niluge_Kiwi
+// Créé par Niluge_Kiwi
 // v 0.232 2007/10/30 13:58:39
 // ======================================================================== //
 //
@@ -36,10 +36,10 @@
 // ======================================================================== //
 //
 if (!defined('XOOPS_ROOT_PATH')) {
-    exit();
+	exit();
 }
 
-aChat_JS_CSS_Headers($xoopsModuleConfig['tmp_refresh']);
+aChat_JS_CSS_Headers($xoopsModuleConfig['tmp_refresh']); 
 
 if(isset($postmessage)) $xoopsTpl->assign('postmessage',$postmessage);
 
@@ -52,8 +52,8 @@ $gperm_handler = &xoops_gethandler('groupperm');
 
 $achat_form = '';
 if ($gperm_handler->checkRight('aChatCanPost', 0 , $groups, $module_id)) {
-    include XOOPS_ROOT_PATH."/modules/".$xoopsModule->getVar("dirname")."/include/achat_form.php";
-    $achat_form = $aform->render();
+	include XOOPS_ROOT_PATH."/modules/".$xoopsModule->getVar("dirname")."/include/achat_form.php";
+	$achat_form = $aform->render();
 }
 
 $xoopsTpl->assign('achat_form', $achat_form);

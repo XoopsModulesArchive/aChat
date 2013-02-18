@@ -1,10 +1,11 @@
-Niluge_Kiwi - 26.08.2006
+README FIRST
+-----------------------
+
+
 --------------------------------------------------------
-Module 
-                     aChat v0.2
-                                            For xoops 2
+Module            aChat v0.24              For xoops 2
 --------------------------------------------------------
-Tested with Xoops 2.0.16
+Tested with Xoops 2.5.6
 --------------------------------------------------------
 
 aChat : A chat module with AJAX.
@@ -35,10 +36,10 @@ For the visitor:
 - Can view the messages in database
 - Can view the messages in archive files (created with purge)
 - 2 blocks :
-   - one which displays the normal chat, 
+   - one which displays the normal chat,
       with autorefresh and send form
-   - one which displays the last messages, 
-      without autorefresh and without send form 
+   - one which displays the last messages,
+      without autorefresh and without send form
 
 For the admin:
 
@@ -51,18 +52,23 @@ For the admin:
    - By number of messages
    - By date
 - Can create html archive file while purging
-- Can choose the height display, and the number of messages 
+- Can choose the height display, and the number of messages
 initially loaded (for main and block).
-- Can choose the permissions by groups, to allow or not to 
+- Can choose the permissions by groups, to allow or not to
 send messages
 - Can clone the module with one click, to create severals rooms
 - Can desable the choice of the nicknames for the anonymous
 
-For translations, contact me (kiwiiii@gmail.com), 
+For translations, contact me (kiwiiii@gmail.com),
 I'll put them on the file module.
 
 --------------------------------------------------------
 
+Known issues:
+- aChat doesn't work with multiMenu : it needs a small hack explained in How_to_use_aChat_and_MultiMenu.txt
+(it can be applied to other modules which use window.onload javascript function)
+
+--------------------------------------------------------
 
 License
 This module is released under the GPL license. See LICENSE.txt for details.

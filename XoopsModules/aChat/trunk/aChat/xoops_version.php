@@ -25,7 +25,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// CrÃ©Ã© par Niluge_Kiwi
+// Créé par Niluge_Kiwi
 // v 0.232 2007/10/12 22:38:22
 // ======================================================================== //
 //
@@ -35,18 +35,38 @@
 //
 // ======================================================================== //
 //
+
+if (!defined('XOOPS_ROOT_PATH')) {
+	die('XOOPS root path not defined');
+}
+
 $modversion['name'] = _MI_ACHAT_NAME;
-$modversion['version'] = 0.232;
+$modversion['version'] = 0.24;
 $modversion['description'] = _MI_ACHAT_DESC;
 $modversion['credits'] = "Niluge_KiWi Projects";
 $modversion['author'] = "Thomas Riccardi, alias Niluge_KiWi";
-$modversion['help'] = "";
-$modversion['license'] = "GPL see LICENSE";
+$modversion['help']        = 'page=help';
+$modversion['license']     = 'GNU GPL 2.0 or later';
+$modversion['license_url'] = "www.gnu.org/licenses/gpl-2.0.html/";
 $modversion['official'] = 0;
 $modversion['image'] = "images/aChat_slogo.png";
 $modversion['dirname'] = "aChat";
 
-
+$modversion['dirmoduleadmin'] = '/Frameworks/moduleclasses/moduleadmin';
+$modversion['icons16']        = '../../Frameworks/moduleclasses/icons/16';
+$modversion['icons32']        = '../../Frameworks/moduleclasses/icons/32';
+//about
+$modversion['release_date']        = '2013/02/02';
+$modversion["module_website_url"]  = "www.xoops.org";
+$modversion["module_website_name"] = "XOOPS";
+$modversion["module_status"]       = "Beta 1";
+$modversion['min_php']             = '5.2';
+$modversion['min_xoops']           = "2.5.5";
+$modversion['min_admin']           = '1.1';
+$modversion['min_db']              = array(
+    'mysql'  => '5.0.7',
+    'mysqli' => '5.0.7'
+);
 
 // XoopsInfo
 $modversion['developer_website_url'] 	= "http://xoops-demo.niluge-kiwi.info/";
@@ -68,6 +88,7 @@ $modversion['onUpdate'] = 'update/achat01_to_achat02.php';
 
 // Admin things
 $modversion['hasAdmin'] = 1;
+$modversion['system_menu'] = 1;
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";
 
@@ -122,7 +143,7 @@ $modversion['blocks'][] = array(
 	'edit_func' => 'b_achat_display_edit',
 	'options' => '0|10',
 	'template' => 'achat_block_static.html');
-
+	
 // Config
 $modversion['config'][1] = array(
 	'name' => 'nbre_msg_aff',
@@ -176,7 +197,7 @@ $modversion['config'][] = array(
 		'6' => 'ff6600',
 		'7' => '660000'),
 	'category' => 'aChat_settings');
-
+		
 $modversion['config'][] = array(
 	'name' => 'nick4guests',
 	'title' => '_MI_ACHAT_NICK4GUESTS',
@@ -185,7 +206,7 @@ $modversion['config'][] = array(
 	'valuetype' => 'int',
 	'default' => 1,
 	'category' => 'aChat_settings');
-
+	
 $modversion['config'][] = array(
 	'name' => 'purge_folder',
 	'title' => '_MI_ACHAT_PURGE_FOLDER',
