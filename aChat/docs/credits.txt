@@ -1,0 +1,6 @@
+Credits
+===============
+
+Originally developed by "Thomas Riccardi, alias Niluge_KiWi"
+
+Version 2.34 was updated to XOOPS 2.5.5 Standard GUI by Michael Beck (Mamba)

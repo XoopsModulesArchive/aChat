@@ -1,5 +1,5 @@
 <?php
-// $Id: main.php, see below 
+// $Id: admin_header.php, see below 
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,8 +25,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-// Cr殚 par Niluge_Kiwi
-// v 0.2 2006/08/30 19:51:23
+// Cr�� par Niluge_Kiwi
+// v 0.232 2007/10/12 22:44:21
 // ======================================================================== //
 //
 //   www.lmdmf.net
@@ -36,34 +36,21 @@
 // ======================================================================== //
 //
 
-define("_MD_ACHAT_SENDMSG","发送");
-define("_MD_ACHAT_TITLE","聊天室");
-define("_MD_ACHAT_TITLE_LOGS","聊天记录");
-define("_MD_ACHAT_GOTO_ACHAT","去聊天室");
 
-// View Archives
-define("_MD_ACHAT_TITLE_ARCHIVES","存档");
-define("_MD_ACHAT_ARCHIVE_FROM","from");
-define("_MD_ACHAT_ARCHIVE_TO","to");
-define("_MD_ACHAT_ARCHIVE_NO","没有存档.");
-define("_MD_ACHAT_ARCHIVE_RETURN","返回存档首页");
-define("_MD_ACHAT_ARCHIVE_NOARCHIVESELECTED","未选择存档.");
+include_once '../../../mainfile.php';
+include_once '../../../include/cp_header.php';
+include_once '../../../include/functions.php';
+include_once XOOPS_ROOT_PATH . '/class/xoopsmodule.php';
+include_once './functions.php';
+include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php'; 
 
-// MyPageNav
-define("_MD_ACHAT_MESSAGES","消息");
-define("_MD_ACHAT_FROM","来自");
-define("_MD_ACHAT_FIRST_OLD","旧的在前");
-define("_MD_ACHAT_FIRST_RECENT","新的在前");
-
-// Blocs
-define("_MB_ACHAT_NBRE_MSG_AFFICHE","要显示的消息数");
-define("_MB_ACHAT_NBRE_MSG_AFFICHEDESC","(留空则使用默认参数设置)");
-define("_MB_ACHAT_TMP_REFRESH","刷新消息的间隔时间");
-define("_MB_ACHAT_TMP_REFRESHDESC","(单位秒, 留空则使用默认参数设置)");
-define("_MB_ACHAT_DIV_HEIGHT","消息显示的高度");
-define("_MB_ACHAT_DIV_HEIGHTDESC","(单位像素, 留空则使用默认值: 180px)");
-define("_MB_ACHAT_DIV_WIDTH","输入框的宽度");
-define("_MB_ACHAT_DIV_WIDTHDESC","(单位列(column), 默认值: 23列)");
-
+	if (file_exists(XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/' . $xoopsConfig['language'] . '/modinfo.php')) {
+		include_once XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/' . $xoopsConfig['language'] . '/modinfo.php';
+	} else {
+		include_once XOOPS_ROOT_PATH . '/modules/'.$xoopsModule->dirname().'/language/french/modinfo.php';
+	}
+	
+$myts = &MyTextSanitizer::getInstance();
+$msgobj_h =& xoops_getmodulehandler('message');
 
 ?>

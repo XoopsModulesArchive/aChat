@@ -18,12 +18,13 @@
  * @version    $Id $
  */
 
-global $pathIcon32;
-echo "<div class='adminfooter'>\n"
-    ."  <div style='text-align: center;'>\n"
-    ."    <a href='http://www.xoops.org' rel='external'><img src='{$pathIcon32}/xoopsmicrobutton.gif' alt='XOOPS' title='XOOPS'></a>\n"
-    ."  </div>\n"
-    ."  " . _AM_MODULEADMIN_ADMIN_FOOTER . "\n"
-    ."</div>";
+include_once dirname(__FILE__) . '/admin_header.php';
 
-xoops_cp_footer();
+xoops_cp_header();
+
+$aboutAdmin = new ModuleAdmin();
+
+echo $aboutAdmin->addNavigation('about.php');
+echo $aboutAdmin->renderAbout('6KJ7RW5DR3VTJ', false);
+
+include 'admin_footer.php';
