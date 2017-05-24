@@ -254,7 +254,7 @@ class achatMessageHandler extends XoopsObjectHandler
 		if($message == '') {
 			return false;
 		}
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		
 		// Gestion du message
 		$message = $myts->addSlashes($message);

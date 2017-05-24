@@ -48,7 +48,7 @@ $criteria->setLimit($limit);
 $criteria->setOrder($order);
 $criteria->setStart($start);
 
-$msgobjs =& $msgobj_h->getObjects($criteria);
+$msgobjs = $msgobj_h->getObjects($criteria);
 $count = $msgobj_h->getCount($criteria);
 $messages = $msgobj_h->getMessagesForDisplay($msgobjs);
 

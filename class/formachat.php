@@ -81,11 +81,11 @@ if (!defined('XOOPS_ROOT_PATH')) {
 	 */
 	function _renderSmileys()
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$smiles =& $myts->getSmileys();
 		$ret = '';
 		if (empty($smileys)) {
-			$db =& Database::getInstance();
+			$db = Database::getInstance();
 			if ($result = $db->query('SELECT * FROM '.$db->prefix('smiles').' WHERE display=1')) {
 				while ($smiles = $db->fetchArray($result)) {
 					$ret .= "<img onclick='xoopsCodeSmilie(\"".$this->getName()."\", \" ".$smiles['code']." \");' onmouseover='style.cursor=\"hand\"' src='".XOOPS_UPLOAD_URL."/".htmlspecialchars($smiles['smile_url'], ENT_QUOTES)."' alt='' />";

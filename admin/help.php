@@ -7,7 +7,7 @@
 */
 
 include_once './admin_header.php';
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 xoops_cp_header();
 aChat_adminmenu(_MI_ACHAT_HELP, -1);
