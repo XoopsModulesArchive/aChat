@@ -1,0 +1,37 @@
+Niluge_Kiwi - 29.08.2006
+--------------------------------------------------------
+MÓdulo 
+                     aChat v0.2
+                                            Para Xoops 2
+--------------------------------------------------------
+
+--------------------------------------------------------
+                 AYUDA DE INSTALACIÓN
+--------------------------------------------------------
+
+Suba los archivos a su servidor, como lo hace para otros
+módulos.
+
+Instale el módulo con el Administrador de Módulos de
+Xoops, como lo hace para otros módulos.
+
+Configure el módulo y los bloques.
+
+Verifique que los derechos de escritura de la carpeta
+que contienen los archivos logs (por defecto se
+encuentran en modules/aChat/logs).
+CHMOD 777
+
+--------------------------------------------------------
+
+
+
+
+Soporte en francés e inglés, en la medida de lo posible.
+
+kiwiiii@gmail.com
+
+
+
+
+--------------------------------------------------------

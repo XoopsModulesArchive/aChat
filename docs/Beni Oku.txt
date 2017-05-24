@@ -1,0 +1,75 @@
+Modül yazarý >>Niluge_Kiwi - 26.08.2006
+--------------------------------------------------------
+Modul 
+                     aChat v0.2
+                                            xoops 2 için !
+--------------------------------------------------------
+Test edilen versiyonlar 2.0.16
+--------------------------------------------------------
+
+aChat : A chat modulü AJAX kullanýlarak yapýlmýþtýr.
+
+--------------------------------------------------------
+
+aChat  chat modülüdür,
+
+Hamurunda ajax kullanýldýðý için sadece mesaj yazma bölümü refresh alarak yenilenmektedir.
+
+--------------------------------------------------------
+
+Bu bir beta versiyonudur.
+
+--------------------------------------------------------
+
+Özellikleri:
+
+Misafirler için:
+
+- BBCode
+- Renk kodlarý mesaj için
+- Gereðinden büyük url adresleri görünümü bozmamasý için kýsýltýlýr
+( Hepsi deðil :) )
+- Misafirleriniz nick seçebilir
+- Veritabanýndaki mesajlarý görebilir
+-Arþiv dosyalarýndaki mesajlarý görebilir
+- 2 türlü blok vardýr :
+   - Biri Normal sohbeti gösteren, 
+      autorefresh le mesaj gönderilen
+   - Diðeri Son mesajlarý gösteren, 
+      Autorefresh olmadan. 
+
+Admin için:
+
+-  Açýk/Kapalý  BBCode
+- Mesajlar için müsait renklerin seçeneði
+- Ip adresleri kaydedilir, ve direk zamanýnýn yanýnda görünür
+(mesaj yazanýn nickinin üzerine geldiðinizde)
+-Veritabanýnda mesajlarýn sayýsýný gösterir
+- Silme özelliði pek geliþmiþ deðildir.Ancak þöyledir :
+   - Mesajlarýn sayýsý ile
+   - Tarih ile
+- Html arþiv dosyasýný yaratabilir silinen mesajlar için
+- Yükseklik ebatlarýný seçebilir (anasayfadaki blok için).
+- Gruplar tarafýndan izinleri seçebilir, mesajlara izin vermek veya yollamamak için.
+- Bir týklamayla modülü klonlayabilir ve fazla oda açabilir bu yolla
+- Seçili nickname anonymous dur deðiþtirebilirsiniz yoksa default olarak kalýr.
+
+
+
+--------------------------------------------------------
+
+
+Lisans
+Bu modül GPL lisansýna sahiptir. Lýsansý görmek için LICENSE.txt i inceleyin.
+Tüm haklarý Niluge_KiWi ' a aittir!
+Resimler belki bu modül için kullanýlabilir ama baþka bir yerde kullanmak isterseniz Niluge_KiWi' den izin almanýz gerekir!
+Niluge_KiWi iletiþim için kiwiiii@gmail.com
+Web sitesi
+http://xoops-demo.niluge-kiwi.info/
+
+// ======================================================================== //
+//    Türkçe çeviri: Engin YILDIRIM
+//                  (By BaCKStagE)
+//                                 admin-denetim@hotmail.com
+//     www.xoopshocasi.com
+// ======================================================================== //
